@@ -1,5 +1,5 @@
 import React from 'react';
-Import {BrowserRouter as Router, Route, Swicth} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import Home from '../home/Home';
 
@@ -14,17 +14,17 @@ const routes = [
 ]
 
 const Routes = () => {
-    const logPageView = () => {
-        ReactGA.set({page: window.location.pathname + window.location.search});
-        React.pageView(window.location.pathname + window.location.search);
-    }
-    logPageView();
+    // const logPageView = () => {
+    //     ReactGA.set({page: window.location.pathname + window.location.search});
+    //     React.pageView(window.location.pathname + window.location.search);
+    // }
+    // logPageView();
 
     return (
         <Router >
-            <Swicth >
+            <Switch >
                 { routes.map( route => <Route key={route.name} exact={route.exact} path={route.path} component={route.component} /> ) } 
-            </Swicth>
+            </Switch>
         </Router>
     );
 }
