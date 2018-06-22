@@ -23,6 +23,9 @@ const socialsReducers = getAsyncActionReducers({
     isFetchingInitialState: initialState.isFetchingSocials
 });
 
+// All combineReducer() does is generate a function that calls your reducers with
+// the slices of state selected according to their keys 
+// Then we can pass a single function to createStore 
 export default combineReducers({
     projects: projectsReducers.objectsReducer,
     blogPosts: blogPostsReducers.objectsReducer,

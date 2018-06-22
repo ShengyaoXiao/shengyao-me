@@ -26,6 +26,7 @@ const getAsyncAction = ({actionTypePrefix, asyncFunc}) => {
         };
     };
 
+    // Dispatch actions 
     const asyncAction = args => {
         return dispatch => {
             dispatch( startAction() );
