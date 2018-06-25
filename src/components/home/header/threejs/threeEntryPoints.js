@@ -2,9 +2,8 @@
  * threeEntryPoint
  * Create canvas and pass to sceneManager 
  * Call BindEventLisener 
- * Call Render (requestAnimationFrame and call sceneManager.update) 
+ * Call Render (requestAnimationFrame and call sceneManager render) 
  */
-
 import SceneManager from './SceneManager';
 
 export default container => {
@@ -36,8 +35,8 @@ export default container => {
         sceneManager.onWindowResize();
     }
 
-    function render(time) {
+    function render() {
         requestAnimationFrame(render);
-        sceneManager.update();
+        sceneManager.render();
     }
 }

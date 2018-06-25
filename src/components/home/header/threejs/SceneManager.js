@@ -5,7 +5,10 @@
  * Expose update function and onWindowResize function  
  */
 import * as THREE from 'three';
+// import {EffectComposer, CopyShader, ShaderPass, RenderPass} from 'three';
 import SceneSubject from './SceneSubject';
+import GeneralLights from './GeneralLights';
+import addPassToComposer from './addPassToComposer';
 
 export default canvas => {
     const clock = new THREE.Clock();
@@ -13,18 +16,24 @@ export default canvas => {
     const screenDimensions = {
         width: canvas.width,
         height: canvas.height
+    }; 
+    
+    const PARAMS = {
+        minFilter: THREE.LinearFilter, 
+        magFilter: THREE.LinearFilter,
+        format: THREE.RGBFormat,
+        stencilBuffer: false 
     };
 
     const scene = buildScene();
-    console.log('in buildScene', scene);
     const renderer = buildRender(screenDimensions);
     const camera = buildCamera(screenDimensions);
-    const sceneSubjects = createSceneSubjects(scene);
+    const shadowBuffer = buildShadowBuffer(screenDimensions, PARAMS);
+    const subjects = createSceneSubjects(scene);
+    const {composer, passes} = buildComposer(screenDimensions, scene, camera);
 
     function buildScene() {
         const scene = new THREE.Scene();
-        scene.background = new THREE.Color(0x003300);
-       
         return scene;
     }
 
@@ -33,43 +42,48 @@ export default canvas => {
         const DPR = window.devicePixelRatio ? window.devicePixelRatio : 1;
         renderer.setPixelRatio(DPR);
         renderer.setSize(width, height);
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.renderReverseSided = false; 
         return renderer;
     }
 
     function buildCamera({width, height}) {
         const aspectRatio = width / height;
-        const fieldOfView = 60;
-        const nearplane = 1;
+        const fieldOfView = 45;
+        const nearplane = 0.1;
         const farPlane = 1000;
         const camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearplane, farPlane);
 
-        camera.position.set(0, 75, 100);
+        camera.position.set(-2, 2, 2);
         return camera;
+    }
+    
+    function buildShadowBuffer({width, height}, PARAMS) {
+        const shadowBuffer = new THREE.WebGLRenderTarget(1, 1, PARAMS);
+        shadowBuffer.setSize(width, height);
+        return shadowBuffer;
     }
 
     function createSceneSubjects(scene) {
-        const sceneSubjects = [
-            new SceneSubject(scene)
-        ];
+        // the other option here is using array 
 
-        return sceneSubjects;
+        // const sceneSubjects = [
+        //     new SceneSubject(scene),
+        //     new GeneralLights(scene),
+        // ];
+        const subjects = new SceneSubject(scene);
+        new GeneralLights(scene);
+        return subjects;
     }
 
-    function update() {
-        // update sceneSubject 
-        const elapsedTime = clock.getElapsedTime();
-        for(let i = 0; i < sceneSubjects.length; i++) {
-            sceneSubjects[i].update(elapsedTime);
-        }
-
-        // update camera 
-        var time = Date.now() / 6000;
-        camera.position.x = 80 * Math.cos( time );
-        camera.position.z = 80 * Math.sin( time );
-        camera.lookAt( scene.position );
+    function buildComposer({width, height}, scene, camera) {
+        const composer = new THREE.EffectComposer(new THREE.WebGLRenderer());
+        composer.addPass(new THREE.RenderPass(scene, camera));
+        const passes = addPassToComposer(composer, {width, height});
         
-        renderer.render(scene, camera);
+        return {composer, passes};
     }
+
 
     function onWindowResize() {
         const {width, height} = canvas;
@@ -79,11 +93,27 @@ export default canvas => {
         camera.aspect = width/height;
         camera.updateProjectionMatrix();
 
+        shadowBuffer.setSize(width, height);
         renderer.setSize(width, height);
+        composer.setSize(width, height);
+    }
+
+    function render() {
+        let renderShadow = true;
+        subjects.changeMaterial(renderShadow);
+        renderer.render(scene, camera, shadowBuffer);
+        passes.pass.uniforms.tShadow.value = shadowBuffer.texture;
+
+        renderShadow = false;
+        subjects.changeMaterial(renderShadow);
+        const elapsed = clock.getElapsedTime();
+        passes.passFinal.uniforms.iTime.value = elapsed;
+
+        composer.render();
     }
 
     return {
-        update,
+        render,
         onWindowResize
     }
 };
