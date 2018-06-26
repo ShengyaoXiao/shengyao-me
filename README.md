@@ -8,5 +8,5 @@
 |    |     ├── SceneSubject.js 
 |    |     └── threeEntryPoint.js
 |    ├── header.css
-|    └── Theader.js
+|    └── Header.js
 ```
