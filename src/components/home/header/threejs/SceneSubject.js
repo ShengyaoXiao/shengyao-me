@@ -3,7 +3,6 @@
  * Create mesh and add it to the scene
  * Expose an update function  
  */
-
 import * as THREE from 'three';
 
 export default scene => {
@@ -28,13 +27,6 @@ export default scene => {
     scene.add(floor);
     scene.add(sphere);    
 
-    // function update(time) {
-    //     // uniforms.time.value = time;
-    // }
-
-    // return {
-    //     update
-    // }
     function changeMaterial(renderShadow) {
         const material = renderShadow ? matShadow : matNormal;
         floor.material = material;

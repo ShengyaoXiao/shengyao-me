@@ -5,10 +5,12 @@
  * Expose update function and onWindowResize function  
  */
 import * as THREE from 'three';
-// import {EffectComposer, CopyShader, ShaderPass, RenderPass} from 'three';
 import SceneSubject from './SceneSubject';
 import GeneralLights from './GeneralLights';
 import addPassToComposer from './addPassToComposer';
+import EffectComposer, {RenderPass} from 'three-effectcomposer-es6';
+import OrbitControls from 'three-orbitcontrols';
+
 
 export default canvas => {
     const clock = new THREE.Clock();
@@ -30,6 +32,7 @@ export default canvas => {
     const camera = buildCamera(screenDimensions);
     const shadowBuffer = buildShadowBuffer(screenDimensions, PARAMS);
     const subjects = createSceneSubjects(scene);
+    const controls = buildControls(camera, renderer);
     const {composer, passes} = buildComposer(screenDimensions, scene, camera);
 
     function buildScene() {
@@ -76,14 +79,18 @@ export default canvas => {
         return subjects;
     }
 
+    function buildControls(camera, renderer) {
+        const controls = new OrbitControls(camera, renderer.domElement);
+        return controls;
+    }
+
     function buildComposer({width, height}, scene, camera) {
-        const composer = new THREE.EffectComposer(new THREE.WebGLRenderer());
-        composer.addPass(new THREE.RenderPass(scene, camera));
+        const composer = new EffectComposer(renderer);
+        composer.addPass(new RenderPass(scene, camera));
         const passes = addPassToComposer(composer, {width, height});
         
         return {composer, passes};
     }
-
 
     function onWindowResize() {
         const {width, height} = canvas;
@@ -96,6 +103,8 @@ export default canvas => {
         shadowBuffer.setSize(width, height);
         renderer.setSize(width, height);
         composer.setSize(width, height);
+
+        passes.pass.uniforms.iResolution.value.set(width, height);
     }
 
     function render() {
@@ -109,6 +118,7 @@ export default canvas => {
         const elapsed = clock.getElapsedTime();
         passes.passFinal.uniforms.iTime.value = elapsed;
 
+        controls.update();
         composer.render();
     }
 

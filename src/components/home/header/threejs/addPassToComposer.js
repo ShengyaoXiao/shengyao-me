@@ -1,14 +1,15 @@
 import * as THREE from 'three';
 import noise from "../../../../assets/textures/noise.png";
+import {ShaderPass} from 'three-effectcomposer-es6';
 
 export default function addPassToComposer(composer, {width, height}) {
     const VERTEX = `
-    varying vec2 vUv;
-    void main() {
-        vUv = uv;
-        vec4 mvPosition = modelViewMatrix * vec4(position, 1.);
-        gl_Position = projectionMatrix * mvPosition;
-    }
+        varying vec2 vUv;
+        void main() {
+            vUv = uv;
+            vec4 mvPosition = modelViewMatrix * vec4(position, 1.);
+            gl_Position = projectionMatrix * mvPosition;
+        }
     `;
 
     // The shader definition also defines a Unifrom called tDiffuse used by
@@ -99,7 +100,7 @@ export default function addPassToComposer(composer, {width, height}) {
         fragmentShader: FRAGMENT
     };
 
-    const pass = new THREE.ShaderPass(drawShader);
+    const pass = new ShaderPass(drawShader);
     composer.addPass(pass);
 
     const finalShader = {
@@ -112,7 +113,7 @@ export default function addPassToComposer(composer, {width, height}) {
         fragmentShader: FRAGMENT_FINAL
     };
 
-    const passFinal = new THREE.ShaderPass(finalShader);
+    const passFinal = new ShaderPass(finalShader);
     passFinal.renderToScreen = true;
     passFinal.material.extensions.derivatives = true;
     composer.addPass(passFinal);
