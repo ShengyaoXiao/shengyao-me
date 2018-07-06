@@ -6,10 +6,10 @@
  */
 import * as THREE from 'three';
 import SceneSubject from './SceneSubject';
-import GeneralLights from './GeneralLights';
-import addPassToComposer from './addPassToComposer';
-import EffectComposer, {RenderPass} from 'three-effectcomposer-es6';
-import OrbitControls from 'three-orbitcontrols';
+// import GeneralLights from './GeneralLights';
+// import addPassToComposer from './addPassToComposer';
+// import EffectComposer, {RenderPass} from 'three-effectcomposer-es6';
+// import OrbitControls from 'three-orbitcontrols';
 
 
 export default canvas => {
@@ -20,20 +20,20 @@ export default canvas => {
         height: canvas.height
     }; 
     
-    const PARAMS = {
-        minFilter: THREE.LinearFilter, 
-        magFilter: THREE.LinearFilter,
-        format: THREE.RGBFormat,
-        stencilBuffer: false 
-    };
+    // const PARAMS = {
+    //     minFilter: THREE.LinearFilter, 
+    //     magFilter: THREE.LinearFilter,
+    //     format: THREE.RGBFormat,
+    //     stencilBuffer: false 
+    // };
 
     const scene = buildScene();
     const renderer = buildRender(screenDimensions);
     const camera = buildCamera(screenDimensions);
-    const shadowBuffer = buildShadowBuffer(screenDimensions, PARAMS);
+    // const shadowBuffer = buildShadowBuffer(screenDimensions, PARAMS);
     const subjects = createSceneSubjects(scene);
-    const controls = buildControls(camera, renderer);
-    const {composer, passes} = buildComposer(screenDimensions, scene, camera);
+    // const controls = buildControls(camera, renderer);
+    // const {composer, passes} = buildComposer(screenDimensions, scene, camera);
 
     function buildScene() {
         const scene = new THREE.Scene();
@@ -45,27 +45,27 @@ export default canvas => {
         const DPR = window.devicePixelRatio ? window.devicePixelRatio : 1;
         renderer.setPixelRatio(DPR);
         renderer.setSize(width, height);
-        renderer.shadowMap.enabled = true;
-        renderer.shadowMap.renderReverseSided = false; 
+        // renderer.shadowMap.enabled = true;
+        // renderer.shadowMap.renderReverseSided = false; 
         return renderer;
     }
 
     function buildCamera({width, height}) {
         const aspectRatio = width / height;
-        const fieldOfView = 45;
-        const nearplane = 0.1;
-        const farPlane = 1000;
+        const fieldOfView = 40;
+        const nearplane = 1;
+        const farPlane = 10000;
         const camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearplane, farPlane);
 
-        camera.position.set(-2, 2, 2);
+        camera.position.set(0, 0, 3);
         return camera;
     }
     
-    function buildShadowBuffer({width, height}, PARAMS) {
-        const shadowBuffer = new THREE.WebGLRenderTarget(1, 1, PARAMS);
-        shadowBuffer.setSize(width, height);
-        return shadowBuffer;
-    }
+    // function buildShadowBuffer({width, height}, PARAMS) {
+    //     const shadowBuffer = new THREE.WebGLRenderTarget(1, 1, PARAMS);
+    //     shadowBuffer.setSize(width, height);
+    //     return shadowBuffer;
+    // }
 
     function createSceneSubjects(scene) {
         // the other option here is using array 
@@ -75,22 +75,22 @@ export default canvas => {
         //     new GeneralLights(scene),
         // ];
         const subjects = new SceneSubject(scene);
-        new GeneralLights(scene);
+        // new GeneralLights(scene);
         return subjects;
     }
 
-    function buildControls(camera, renderer) {
-        const controls = new OrbitControls(camera, renderer.domElement);
-        return controls;
-    }
+    // function buildControls(camera, renderer) {
+    //     const controls = new OrbitControls(camera, renderer.domElement);
+    //     return controls;
+    // }
 
-    function buildComposer({width, height}, scene, camera) {
-        const composer = new EffectComposer(renderer);
-        composer.addPass(new RenderPass(scene, camera));
-        const passes = addPassToComposer(composer, {width, height});
+    // function buildComposer({width, height}, scene, camera) {
+    //     const composer = new EffectComposer(renderer);
+    //     composer.addPass(new RenderPass(scene, camera));
+    //     const passes = addPassToComposer(composer, {width, height});
         
-        return {composer, passes};
-    }
+    //     return {composer, passes};
+    // }
 
     function onWindowResize() {
         const {width, height} = canvas;
@@ -100,26 +100,30 @@ export default canvas => {
         camera.aspect = width/height;
         camera.updateProjectionMatrix();
 
-        shadowBuffer.setSize(width, height);
+        subjects.resize(width, height);
+        // shadowBuffer.setSize(width, height);
         renderer.setSize(width, height);
-        composer.setSize(width, height);
+        // composer.setSize(width, height);
 
-        passes.pass.uniforms.iResolution.value.set(width, height);
+        // passes.pass.uniforms.iResolution.value.set(width, height);
     }
 
     function render() {
-        let renderShadow = true;
-        subjects.changeMaterial(renderShadow);
-        renderer.render(scene, camera, shadowBuffer);
-        passes.pass.uniforms.tShadow.value = shadowBuffer.texture;
+        // let renderShadow = true;
+        // subjects.changeMaterial(renderShadow);
+        // renderer.render(scene, camera, shadowBuffer);
+        // passes.pass.uniforms.tShadow.value = shadowBuffer.texture;
 
-        renderShadow = false;
-        subjects.changeMaterial(renderShadow);
-        const elapsed = clock.getElapsedTime();
-        passes.passFinal.uniforms.iTime.value = elapsed;
+        // renderShadow = false;
+        // subjects.changeMaterial(renderShadow);
+        // const elapsed = clock.getElapsedTime();
+        // passes.passFinal.uniforms.iTime.value = elapsed;
 
-        controls.update();
-        composer.render();
+        // controls.update();
+        // composer.render();
+        const elapsedTime = clock.getElapsedTime();
+        subjects.update(elapsedTime);
+        renderer.render(scene, camera);
     }
 
     return {

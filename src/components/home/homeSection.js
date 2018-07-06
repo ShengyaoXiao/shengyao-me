@@ -1,7 +1,7 @@
 import About from "./about/About";
-import WorkContainer from "./work/WorkContainer";
-// import Blog from "./blog/Blog";
-import Contact from "./contact/Contact";
+// import WorkContainer from "./work/WorkContainer";
+// // import Blog from "./blog/Blog";
+// import Contact from "./contact/Contact";
 
 const SECTIONS = [
     {
@@ -10,7 +10,7 @@ const SECTIONS = [
     },
     {
         name: "work",
-        component: WorkContainer
+        component: null
     },
     {
         name: "blog",
@@ -18,8 +18,8 @@ const SECTIONS = [
     },
     {
         name: "contact",
-        component: Contact
+        component: null
     }
-]   
+];   
 
 export default SECTIONS;
