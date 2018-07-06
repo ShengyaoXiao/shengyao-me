@@ -5,6 +5,7 @@ import "./header.css";
 
 export default class Header extends Component {
     componentDidMount() {
+        // this.threeRootElement is the reference to the dom element 
         threeEntryPoint(this.threeRootElement);
     }
 

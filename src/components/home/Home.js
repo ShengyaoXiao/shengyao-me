@@ -5,7 +5,7 @@ import {withRouter} from 'react-router';
 
 import scrollToElement from 'scroll-to-element';
 
-// import {fetchProjects} from "../../redux/actions/projects";
+import {fetchProjects} from "../../redux/actions/projects";
 
 import Navbar from "./NavBar";
 import Header from './header/Header';
@@ -14,7 +14,7 @@ import homeSections from "./homeSection";
 
 import "./home.css";
 
-export default class Home extends Component {
+class Home extends Component {
     constructor(props) {
         super(props);
 
@@ -24,9 +24,9 @@ export default class Home extends Component {
         };
     }
 
-    // componentWillMount = () => {
-    //     this.props.fetchProjects();
-    // }
+    componentWillMount = () => {
+        this.props.fetchProjects();
+    }
 
     // addEventListener for scroll event 
     componentDidMount = () => {
@@ -57,7 +57,7 @@ export default class Home extends Component {
 
         if(!element) return;
 
-        // imported method 
+        // call scrollToElement 
         scrollToElement(element, {
             offset: (this._getNavBarHeight()-1)*-1,
             ease: 'inOutQuad',
@@ -109,11 +109,14 @@ export default class Home extends Component {
         const {currentSection, currentScroll} = this.state;
         return (
             <div className="root-home"> 
+                {/* nav bar  */}
                 <div ref={element =>this.navbar = element}>
                     <Navbar items={homeSections} onItemClick={this.scrollToSection} currenSection={currentSection} currentScroll={currentScroll} />
                 </div>
+                
                 {/* header  */}
                 <Header />
+                
                 {/* sections  */}
                 {
                     homeSections.filter(section =>section.component)
@@ -129,13 +132,13 @@ export default class Home extends Component {
 
 }
 
-// const mapStateToProps = store => ({
-//     projects: store.projects
-// });
+const mapStateToProps = store => ({
+    projects: store.projects
+});
 
-// const mapDispatchToProps = dispatch => ({
-//     fetchProjects:(args) => dispatch(fetchProjects(args))
-// });
+const mapDispatchToProps = dispatch => ({
+    fetchProjects:(args) => dispatch(fetchProjects(args))
+});
 
-// export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));
 

@@ -1,5 +1,6 @@
 # Shengyao
-
+## Header is built with Three.js.
+Directory structure. 
 ```
 ├── Header
 |    ├── threejs

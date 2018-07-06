@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import Home from '../home/Home';
 
-import ReactGA from 'react-ga';
+// import ReactGA from 'react-ga';
 
 const routes = [
     {
