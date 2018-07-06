@@ -5,7 +5,7 @@ import {withRouter} from 'react-router';
 
 import scrollToElement from 'scroll-to-element';
 
-import {fetchProjects} from "../../redux/actions/projects";
+import {fetchProjects} from "../redux/actions/projects";
 
 import Navbar from "./NavBar";
 import Header from './header/Header';

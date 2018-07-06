@@ -23,8 +23,8 @@ class Work extends Component {
         
         return (
             <div className="home-section work-container">
-                <div clasName="projects-container-work">
-                    <ProjectsContainer project={projects} projectClick={this.onProjectCLick}/>
+                <div className="projects-container-work">
+                    <ProjectsContainer project={projects} projectClick={this.onProjectClick}/>
                 </div>
             </div>
         );

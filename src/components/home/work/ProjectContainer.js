@@ -5,7 +5,7 @@ import Project from "./Project";
 import "./projectsContainer.css";
 
 const ProjectsContainer = ({projects, projectClick}) => {
-    projects = projects.sort((a, b) => a.highlight < b.highlight);
+    // projects = projects.sort((a, b) => a.highlight < b.highlight);
 
     return (
         <div className="projects-container">
