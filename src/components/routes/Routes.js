@@ -1,4 +1,6 @@
 import React from 'react';
+// browser router should be used when you have a server that will handle dynamic requests
+// dynamic server ( knows how to respond to any possible url )
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import Home from '../home/Home';
@@ -20,6 +22,8 @@ const Routes = () => {
     // }
     // logPageView();
 
+    // the <Route> component is tehe main building block of React Router.
+    // Anywhere that you want to only render content based on the location's pathname, you should use a <Router> element
     return (
         <Router >
             <Switch >
