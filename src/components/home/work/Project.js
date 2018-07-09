@@ -8,8 +8,8 @@ const Project = ({project, onClick}) => {
     
     return (
         <div className={"project-card clickable text-unselectable " + className} onClick={ev=>onClick(project.id)} >
-            <img className="project-image" alt={project.name} src={project.imgSamll} />
-            <div className="infor-bar">
+            <img className="project-image" alt={project.name} src={project.imgSmall} />
+            <div className="info-bar">
                 <div>{project.name}</div>
             </div>
         </div>

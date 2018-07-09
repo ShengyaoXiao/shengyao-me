@@ -101,7 +101,7 @@ export default scene => {
     scene.add( mesh );
 
     function update(time) {
-        uniforms.u_time.value = time;
+        uniforms.u_time.value += time;
     }
 
     function resize(width, height) {

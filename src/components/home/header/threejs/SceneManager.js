@@ -121,8 +121,9 @@ export default canvas => {
 
         // controls.update();
         // composer.render();
-        const elapsedTime = clock.getElapsedTime();
-        subjects.update(elapsedTime);
+        // const elapsedTime = clock.getElapsedTime();
+        // subjects.update(elapsedTime);
+        subjects.update(0.01);
         renderer.render(scene, camera);
     }
 

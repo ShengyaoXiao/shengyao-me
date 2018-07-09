@@ -50,7 +50,7 @@ class Home extends Component {
     
         // temporary hack, will implement a section in the page, dont have time to do it right now
         if(sectionName === "blog") {
-            const win = window.open("https://medium.com", '_blank');
+            const win = window.open("https://www.zhihu.com/people/shengyao-36/activities", '_blank');
             win.focus();
         }            
         // ----
