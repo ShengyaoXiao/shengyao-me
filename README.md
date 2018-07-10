@@ -1,5 +1,5 @@
 # Shengyao
-This is my personal website WIP. Check it out: https://www.xiaoshengyao.me
+ My personal website WIP. It is built with Reacr+Redux. Check it out: https://www.xiaoshengyao.me
 
 ## Header is built with Three.js.
 Directory structure. 
