@@ -25,6 +25,7 @@ class Work extends Component {
         
         return (
             <div className="home-section work-container">
+                <div className="work-subtitle">Expriements and explorations that create visuals using three.js and GLSL. </div> 
                 <div className="projects-container-work">
                     <ProjectsContainer projects={projects} projectClick={this.onProjectClick}/>
                 </div>

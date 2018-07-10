@@ -14,7 +14,7 @@ class WorkContainer extends Component {
         // const key = location.pathname.substring(1);
 
         return (
-            <div className="work">
+            <div className="work">   
                 <Switch location={location} >             
                     {/* <Route path={"/:projectId"} exact component={ProjectDetails} />   */}
                     <Route path={"/"}  component={Work} />
