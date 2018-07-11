@@ -13,10 +13,10 @@ export default {
             url: "https://github.com/ShengyaoXiao"
         },
         {
-            name: "instagram",
+            name: "codepen",
             text: "",
-            icon: "fab fa-instagram",
-            url: ""
+            icon: "fab fa-codepen",
+            url: "https://codepen.io/dashboard?type=view&opts_itemType=pen&opts_filter=all&opts_orderBy=id&opts_orderDirection=0&opts_tag=0&displayType=grid&previewType=iframe&page=0"
         },
         {
             name: "facebook",
