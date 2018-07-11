@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {withRouter} from 'react-router';
 import {connect} from 'react-redux';
 
+import "./projectDetails.css";
+
 class ProjectDetails extends Component {
     componentDidMount = () => {
         document.addEventListener("keydown", this.handleKeyDown);
@@ -21,7 +23,6 @@ class ProjectDetails extends Component {
         this.props.history.push("");
     }
 
-
     render() {
         const projectId = this.props.location.pathname.substring(1);
         const project = this.props.projects.find(project => project.id === projectId);
@@ -39,16 +40,43 @@ class ProjectDetails extends Component {
 }
 
 
-const ProjectDetailsCard = ({project, onClick}) =>{
+const ProjectDetailsCard = ({ project, onClick }) => {
     return (
         <div className="project-details-card" onClick={onClick} >
-            <img className="project-details-image size" alt={project.name} src={project.img} / >
+            <img className="project-details-image size" alt={project.name} src={project.img} />
+            
+            <div className="project-details-text padding">
+                <div className="project-details-title">{project.name}</div>
+                <div className="project-details-subtitle">{project.subtitle}</div>
+
+                <div className="project-details-description"><MultilineText text={project.description} /></div>
+                
+                <div className="project-details-main-links">{project.links.map( link => ( 
+                    <a className="project-details-link" key={link.url} href={link.url} target="_blank" rel="noopener noreferrer">
+                        <i className={link.icon +" project-details-icon"} aria-hidden="true" />
+                        <span>{link.name}</span>
+                    </a> ))}
+                </div>
+                <div className="project-details-secondary-links">{project.secondaryLinks.map( link => ( 
+                    <a className="project-details-link" key={link.url} href={link.url} target="_blank" rel="noopener noreferrer">
+                        <i className={link.icon +" project-details-icon"} aria-hidden="true" />
+                        <span>{link.name}</span>
+                    </a> ))}
+                </div>
+            </div>
         </div>
     )
+}
+const MultilineText = ({text}) => {
+    return (
+        <div>
+            { text.split("<br/>").map( (textLine, index) => <span key={index} >{textLine}<br/></span> ) }
+        </div>
+    );
 }
 
 const mapStateToProps = store => ({
     projects: store.projects
-})
+});
 
 export default withRouter(connect(mapStateToProps)(ProjectDetails));

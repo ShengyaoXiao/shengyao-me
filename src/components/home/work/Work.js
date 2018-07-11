@@ -16,7 +16,7 @@ class Work extends Component {
 
     // If you want that your component receive RouterProps, but don't want to wrap it in <Route component={Some}>
     // You can use withRoute function to connect component to the router
-    onProjectCLick = projectId => {
+    onProjectClick = projectId => {
         this.props.history.push(projectId);
     }
 

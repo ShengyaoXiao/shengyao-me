@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import {withRouter} from 'react-router';
 import {Route, Switch} from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
+import ProjectDetails from "./projectDetails/ProjectDetails";
 import Work from "./Work";
 
 class WorkContainer extends Component {
@@ -11,15 +13,17 @@ class WorkContainer extends Component {
 
     render() {
         const {location} = this.props;
-        // const key = location.pathname.substring(1);
+        const key = location.pathname.substring(1);
 
         return (
-            <div className="work">   
-                <Switch location={location} >             
-                    {/* <Route path={"/:projectId"} exact component={ProjectDetails} />   */}
-                    <Route path={"/"}  component={Work} />
-                </Switch>
-            </div>
+            <TransitionGroup className="work">
+                <CSSTransition  key={key} classNames='route-fade' timeout={600} >
+                    <Switch location={location} >             
+                        <Route path={"/:projectId"} exact component={ProjectDetails} />  
+                        <Route path={"/"}  component={Work} />
+                    </Switch>
+                </CSSTransition>
+            </TransitionGroup>
         );
     }
 }
