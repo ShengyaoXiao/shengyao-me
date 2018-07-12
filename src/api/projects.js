@@ -28,7 +28,11 @@ export default {
                 name: "Shiny Moon",
                 subtitle: "An expriment with bloom shader.",
                 description: "Shiny moon is inspired by a moon night-lights. I wrote a short blog about how to render post effects using Three.js. Check the link below if you are interested. ",
+<<<<<<< HEAD
                 links: [{url:"https://zhuanlan.zhihu.com/p/38612359", name: "Open Website",icon: "fas fa-external-link-alt"}],
+=======
+                links: [{url:"https://zhuanlan.zhihu.com/p/38612359", name: "Read the blog",icon: "fas fa-external-link-alt"}],
+>>>>>>> dd974cf62a13354eeef9ed64879923fb0fb7c9ab
                 secondaryLinks: [{url: "https://codepen.io/higashino/pen/xzQwoe", name: "Play live", icon: "fab fa-codepen"}],
                 img: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FmoonAfter.png?alt=media&token=60c2e0bf-d76d-44f3-b5e9-c59d57ed50dc",
                 imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FmoonAfter.png?alt=media&token=60c2e0bf-d76d-44f3-b5e9-c59d57ed50dc",
