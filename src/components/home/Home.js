@@ -144,21 +144,23 @@ const mapStateToProps = store => ({
 //     }
 // );
 
+// You can create bindActionsToDispatch automatically dispatches. 
+// bind multiple action creators to a dispatch() function 
+// Now you can call them directly, eg. this.props.fetchProjects();
 const mapDispatchToProps = dispatch => ({
     fetchProjects:(args) => dispatch(fetchProjects(args))
 });
-// Important things: 
+// Important things happening here: 
 // 1. we re setting up props that hold our actions creator
 // 2. binding the action creators to dispatch 
 
+
+// mapStateToProps needs to be a function 
+// mapDispatchToProps can either be a function or an object.
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));
 
-// mapStateToProps needs be to a function 
 // mapStateToProps connects state from the store to corresponding props.
 // This makes it possible to access your reducer state objects from within your react component 
-// This function will subscribe to the Redux stire and any updates will update props automatically
+// This function will subscribe to the Redux store and any updates will update props automatically
 // mapStateToProps needs to return an object, where the key is the new prop new to be used in the React
 // app abd the value is the name of the reducer function 
-
-// mapDispatchToProps can either be a function or an object.
-// 
