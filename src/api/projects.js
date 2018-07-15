@@ -4,6 +4,7 @@ export default {
             {
                 id: "Postprocessing",
                 name: "Postprocessing",
+                labels: ["Three.js", "GLSL"],
                 subtitle: "Playing around with shaders and post-processing effects",
                 description: "This project is built with Three.js and GLSL. This hand-drawing effect is created by multiple shaders. One shader is for edge detection and the other one uses noise function for such sense of randomness.",
                 links: [{url:"https://github.com/ShengyaoXiao/postprocessing", name:"Open Project", icon: "fab fa-github"}],
@@ -15,6 +16,7 @@ export default {
             {
                 id: "Serendipity",
                 name: "Serendipity",
+                labels: ["Three.js", "GLSL"],
                 subtitle: "Playing around with shaders and post-processing effects",
                 description: "This project is built with Three.js and GLSL. The random shape of the mesh is done by a vertex shader which change the vertex displacement randomly. Its glowing post-effect is created by a bloom shader. I named this project 'Serendipity' as it looks like a shiny magic diamond.",
                 links: [{url:"https://github.com/ShengyaoXiao/glsl/tree/master/experiment%235", name:"Open Project",icon: "fab fa-github"}],
@@ -26,6 +28,7 @@ export default {
             {
                 id: "ShinyMoon",
                 name: "Shiny Moon",
+                labels: ["Three.js", "GLSL"],
                 subtitle: "An expriment with bloom shader.",
                 description: "Shiny moon is inspired by a moon night-lights. I wrote a short blog about how to render post effects using Three.js. Check the link below if you are interested. ",
                 links: [{url:"https://zhuanlan.zhihu.com/p/38612359", name: "Read the blog",icon: "fas fa-external-link-alt"}],
@@ -37,6 +40,7 @@ export default {
             {
                 id: "Lava",
                 name: "Lava",
+                labels:["GLSL"],
                 subtitle: "An experiment learning GLSL, noise function and random function.",
                 description: "It's",
                 links: [],
@@ -48,6 +52,7 @@ export default {
             {
                 id: "Grasswithnoise",
                 name: "Grass with Noise",
+                labels:["GLSL"],
                 subtitle: "An experiment learning GLSL, noise function and random function.",
                 description: "2D noise function creates this water wave/wind motion.",
                 links: [],
@@ -59,6 +64,7 @@ export default {
             {
                 id: "Earthinsmoke",
                 name: "Earth in Smoke",
+                labels:["Three.js", "GLSL"],
                 subtitle: "An experiment with shaders.",
                 description: "This smoke visual is created by changing the coordinates of the texture, and sampling the texture twice.",
                 links: [],
@@ -70,6 +76,7 @@ export default {
             {
                 id: "Sakura",
                 name: "Sakura",
+                labels:["GLSL"],
                 subtitle: "An experiment learning GLSL, noise function and random function.",
                 description: "First shader that I created! Yeaah!",
                 linkss: [],

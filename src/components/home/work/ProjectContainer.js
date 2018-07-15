@@ -4,13 +4,11 @@ import Project from "./Project";
 
 import "./projectsContainer.css";
 
-const ProjectsContainer = ({projects, projectClick}) => {
-    // projects = projects.sort((a, b) => a.highlight < b.highlight);
-    // console.log(projectClick);
-
+const ProjectsContainer = ({activeLabels, projects, projectClick}) => {
+    
     return (
         <div className="projects-container">
-            {projects.map(project => <Project key={project.name} project={project} onClick={projectClick} />)}
+            {projects.map(project => <Project key={project.name} project={project} onClick={projectClick} activeLabels={activeLabels} />)}
         </div>
     );
 }

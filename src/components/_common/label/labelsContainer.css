@@ -1,0 +1,12 @@
+.labels-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.labels-container-horizontal {
+    flex-flow: row wrap;
+}
+
+.labels-conatiner-vertical {
+    flex-flow: column wrap; 
+}
