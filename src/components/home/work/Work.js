@@ -14,8 +14,7 @@ class Work extends Component {
         this.state={activeLabels: []};
     }
 
-    // If you want that your component receive RouterProps, but don't want to wrap it in <Route component={Some}>
-    // You can use withRoute function to connect component to the router
+    // redirect 
     onProjectClick = projectId => {
         this.props.history.push(projectId);
     }
@@ -69,9 +68,8 @@ const mapStateToProps = store => ({
    projects: store.projects
 });
 
-// withRouter will need to wrap the container compoment that is being connected 
-// and not the functional component that may actually render the Routes.
 export default withRouter(connect(mapStateToProps)(Work));
+
 
 
 

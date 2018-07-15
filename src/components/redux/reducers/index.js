@@ -5,6 +5,7 @@ import { prefixes } from "../actions/_constants"
 
 import getAsyncActionReducers from "./asyncActionReducer";
 
+// Reducers specify how the application changes in response to actions sent to the store.
 const projectsReducers = getAsyncActionReducers({ 
     actionTypePrefix: prefixes.PROJECTS,
     objectsInitialState: initialState.projects,
@@ -25,7 +26,7 @@ const socialsReducers = getAsyncActionReducers({
 
 // All combineReducer() does is generate a function that calls your reducers with
 // the slices of state selected according to their keys 
-// Then we can pass a single function to createStore 
+// Then we can pass a single function to createStore (rootReducer)
 export default combineReducers({
     projects: projectsReducers.objectsReducer,
     blogPosts: blogPostsReducers.objectsReducer,

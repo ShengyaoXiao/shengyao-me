@@ -17,7 +17,6 @@ const About = () => {
     // }
     // resume 
 
-
     return (
         <div className="home-section container-about">        
             <img className="profile-picture-about" alt="profilepic" src={profilePic} />

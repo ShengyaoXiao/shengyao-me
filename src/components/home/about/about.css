@@ -14,7 +14,6 @@
     min-width: 100px;
 
     border-radius: 360px;
-    /* border: 4px solid rgba(0, 0, 0, 0.6); */
 }
 
 .about-text {
@@ -61,52 +60,6 @@
         margin-right: 60px;
     
         border-radius: 360px;
-        /* border: 4px solid rgba(0, 0, 0, 0.6); */
 
-        /* -webkit-animation: about-image-border-change 10000ms infinite;
-        -moz-animation: about-image-border-change 10000ms infinite;
-        -o-animation: about-image-border-change 10000ms infinite;
-        -ms-animation: about-image-border-change 10000ms infinite;
-        animation: about-image-border-change 10000ms infinite; */
     }
 }
-
-/* @-webkit-keyframes about-image-border-change {
-    0% { border: 4px solid rgba(33, 150, 243, 0.4); }
-    25% { border: 4px solid rgba(76, 175, 80, 0.4); }
-    50% { border: 4px solid rgba(255, 193, 7, 0.4); } 
-    75% { border: 4px solid rgba(255, 87, 34, 0.4); } 
-    100% { border: 4px solid rgba(33, 150, 243, 0.4); } 
-}
-
-@-moz-keyframes about-image-border-change {
-    0% { border: 4px solid rgba(33, 150, 243, 0.4); }
-    25% { border: 4px solid rgba(76, 175, 80, 0.4); }
-    50% { border: 4px solid rgba(255, 193, 7, 0.4); } 
-    75% { border: 4px solid rgba(255, 87, 34, 0.4); } 
-    100% { border: 4px solid rgba(33, 150, 243, 0.4); } 
-}
-
-@-ms-keyframes about-image-border-change {
-    0% { border: 4px solid rgba(33, 150, 243, 0.4); }
-    25% { border: 4px solid rgba(76, 175, 80, 0.4); }
-    50% { border: 4px solid rgba(255, 193, 7, 0.4); } 
-    75% { border: 4px solid rgba(255, 87, 34, 0.4); } 
-    100% { border: 4px solid rgba(33, 150, 243, 0.4); } 
-}
-
-@-o-keyframes about-image-border-change {
-    0% { border: 4px solid rgba(33, 150, 243, 0.4); }
-    25% { border: 4px solid rgba(76, 175, 80, 0.4); }
-    50% { border: 4px solid rgba(255, 193, 7, 0.4); } 
-    75% { border: 4px solid rgba(255, 87, 34, 0.4); } 
-    100% { border: 4px solid rgba(33, 150, 243, 0.4); } 
-}
-
-@keyframes about-image-border-change {
-    0% { border: 4px solid rgba(33, 150, 243, 0.4); }
-    25% { border: 4px solid rgba(76, 175, 80, 0.4); }
-    50% { border: 4px solid rgba(255, 193, 7, 0.4); } 
-    75% { border: 4px solid rgba(255, 87, 34, 0.4); } 
-    100% { border: 4px solid rgba(33, 150, 243, 0.4); } 
-} */

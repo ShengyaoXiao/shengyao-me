@@ -22,7 +22,7 @@ const Routes = () => {
     // }
     // logPageView();
 
-    // the <Route> component is tehe main building block of React Router.
+    // the <Route> component is the main building block of React Router.
     // Anywhere that you want to only render content based on the location's pathname, you should use a <Router> element
     return (
         <Router >
