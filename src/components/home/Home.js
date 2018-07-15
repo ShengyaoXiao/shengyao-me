@@ -48,7 +48,7 @@ class Home extends Component {
         // get the reference to the dom element
         const element = this._getPageElementFromKey(sectionName);
     
-        // temporary hack, will implement a section in the page, dont have time to do it right now
+        // temporary hack, will implement a section in the page
         if(sectionName === "blog") {
             const win = window.open("https://www.zhihu.com/people/shengyao-36/activities", '_blank');
             win.focus();
@@ -111,7 +111,7 @@ class Home extends Component {
             <div className="root-home"> 
                 {/* nav bar  */}
                 <div ref={element =>this.navbar = element}>
-                    <Navbar items={homeSections} onItemClick={this.scrollToSection} currenSection={currentSection} currentScroll={currentScroll} />
+                    <Navbar items={homeSections} onItemClick={this.scrollToSection} currentSection={currentSection} currentScroll={currentScroll} />
                 </div>
                 
                 {/* header  */}
