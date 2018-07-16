@@ -6,6 +6,11 @@ import { prefixes } from "../actions/_constants"
 import getAsyncActionReducers from "./asyncActionReducer";
 
 // Reducers specify how the application changes in response to actions sent to the store.
+// (state, action) => newState 
+// so it is nornal to have a root reducer function that calls other reducers, splitting up 
+// the job updating the redux state object. Higher order reducers are a common technique for 
+// rerusing reducer logic. A higher reducer is a function that returna new reducer function. 
+
 const projectsReducers = getAsyncActionReducers({ 
     actionTypePrefix: prefixes.PROJECTS,
     objectsInitialState: initialState.projects,

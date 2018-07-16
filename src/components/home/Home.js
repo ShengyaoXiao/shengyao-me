@@ -79,9 +79,12 @@ class Home extends Component {
         for(let key in refs) {
             const boundingRect = this._getPageElementFromKey(key).getBoundingClientRect();
 
+            // console.log(boundingRect.top - this._getNavBarHeight());
             if( boundingRect.top - this._getNavBarHeight() <= 0 ) {
                 this._onEnterSection(key);
                 inSection = true;
+                console.log("in section");
+                console.log("key is ", key);
             }
         }
 
@@ -89,6 +92,7 @@ class Home extends Component {
             // set state 
             this._onEnterSection("contact");
             inSection = true;
+            console.log("in section contact")
         }
 
         if(!inSection) {
@@ -111,7 +115,7 @@ class Home extends Component {
             <div className="root-home"> 
                 {/* nav bar  */}
                 <div ref={element =>this.navbar = element}>
-                    <Navbar items={homeSections} onItemClick={this.scrollToSection} currenSection={currentSection} currentScroll={currentScroll} />
+                    <Navbar items={homeSections} onItemClick={this.scrollToSection} currentSection={currentSection} currentScroll={currentScroll} />
                 </div>
                 
                 {/* header  */}
