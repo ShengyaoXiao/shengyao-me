@@ -5,7 +5,7 @@ import "./postsContainer.css";
 const PostsContainer = ({blogPosts, postClick}) => {
     return (
         <div className="posts-container">
-            {blogPosts.map(post=><Post key={post.title} post={post} onCllick={postClick} />)}
+            {blogPosts.map(post=> <Post key={post.fields.title} post={post.fields} onCllick={postClick} />)}
         </div> 
     );
 }

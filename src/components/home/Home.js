@@ -26,7 +26,7 @@ class Home extends Component {
     }
 
     componentWillMount = () => {
-        // this.props.fetchProjects();
+        this.props.fetchProjects();
         this.props.fetchBlogPosts();
     }
 
@@ -109,9 +109,6 @@ class Home extends Component {
 
     render() {
         const {currentSection, currentScroll} = this.state;
-        const {projects, blogPosts} = this.props;
-        // console.log("in home, projects is", projects);
-        console.log("in home, blogPosts is ", blogPosts);
         
         return (
             <div className="root-home"> 
@@ -149,7 +146,7 @@ class Home extends Component {
 }
 
 const mapStateToProps = store => ({
-    // projects: store.projects,
+    projects: store.projects,
     blogPosts: store.blogPosts
 });
 
@@ -165,7 +162,7 @@ const mapStateToProps = store => ({
 // bind multiple action creators to a dispatch() function 
 // Now you can call them directly, eg. this.props.fetchProjects();
 const mapDispatchToProps = dispatch => ({
-    // fetchProjects:(args) => dispatch(fetchProjects(args)),
+    fetchProjects:(args) => dispatch(fetchProjects(args)),
     fetchBlogPosts:(args) => dispatch(fetchBlogPosts(args))
 });
 // Important things happening here: 
