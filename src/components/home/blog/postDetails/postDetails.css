@@ -1,0 +1,157 @@
+.post-details-dialog-container {
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.post-not-found {
+    justify-self: center;
+}
+
+.post-details-navigate-back-button {
+    display: flex;
+    justify-content: start;
+
+    justify-self: start;
+    
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 200ms ease-in-out;
+}
+
+.post-details-navigate-back-button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: all 200ms ease-in;
+}
+
+.post-details-card {
+    background-color: white;
+    border-radius: 4px;
+    border-color: transparent;
+    
+    overflow: hidden;
+    box-shadow:  0 3px 6px rgba(0,0,0,0.32), 0 3px 4px rgba(0,0,0,0.34);
+    transition: all 300ms ease-in;
+}
+
+.post-details-text {
+    line-height: 2em;
+    color: #333;
+}
+
+.post-details-title {
+    color: #222;
+    text-transform: uppercase;
+    font-size: 32px;
+    line-height: 1.5em;
+}
+
+.post-details-subtitle {
+    color: #222;
+    font-size: 20px;
+    line-height: 1.2em;
+    margin-bottom: 24px;
+}
+
+.post-details-content {
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+
+/* desktop-x-small */
+@media all and (min-width: 0) and (max-width: 480px) { 
+    .post-details-dialog-container.margin {
+        padding-top: 0px;
+        padding-bottom: 16px;
+    }
+
+    .post-details-navigate-back-button.padding {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .post-details-title {
+        font-size: 24px;
+        line-height: 1.5em;
+    }
+    
+    .post-details-subtitle {
+        font-size: 18px;
+        line-height: 1.2em;
+        margin-bottom: 24px;
+    }
+
+    .post-details-text.padding {
+        padding: 16px;
+    }
+}
+
+/* desktop-small */
+@media all and (min-width: 481px) and (max-width: 840px) {
+    .post-details-dialog-container.margin {
+        padding-top: 0px;
+        padding-bottom: 16px;
+    }  
+    
+    .postt-details-navigate-back-button.padding {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .post-details-title {
+        font-size: 24px;
+        line-height: 1.5em;
+    }
+    
+    .post-details-subtitle {
+        font-size: 18px;
+        line-height: 1.2em;
+        margin-bottom: 24px;
+    }
+
+    .post-details-text.padding {
+        padding: 16px;
+    }
+}
+
+/* desktop-medium */
+@media all and (min-width: 841px) and (max-width: 1280px) {
+    .post-details-dialog-container.margin {
+        padding-top: 0px;
+        padding-bottom: 32px;
+    }
+    
+    .post-details-navigate-back-button.padding {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    .post-details-text.padding {
+        padding: 32px;
+    }
+}
+
+/* desktop-large */
+@media all and (min-width: 1281px) {  
+    .post-details-dialog-container.margin {
+        padding-top: 42px;
+        padding-bottom: 80px;
+    }
+
+    .post-details-navigate-back-button.padding {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    .post-details-text.padding {
+        padding: 32px;
+    }
+}

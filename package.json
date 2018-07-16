@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "ajv": "^6.5.2",
+    "contentful": "^6.1.1",
     "immutable": "^3.8.1",
     "install": "^0.10.1",
     "npm": "^5.3.0",
@@ -15,6 +16,7 @@
     "react-scripts": "1.1.1",
     "react-transition-group": "^2.2.0",
     "redux": "^3.7.2",
+    "redux-immutable-state-invariant": "^2.1.0",
     "redux-thunk": "^2.2.0",
     "scroll-to-element": "^2.0.0",
     "three": "^0.93.0",

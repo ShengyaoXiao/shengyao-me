@@ -6,6 +6,7 @@ import {withRouter} from 'react-router';
 import scrollToElement from 'scroll-to-element';
 
 import {fetchProjects} from "../redux/actions/projects";
+import {fetchBlogPosts} from "../redux/actions/blogPost";
 
 import Navbar from "./NavBar";
 import Header from './header/Header';
@@ -25,7 +26,8 @@ class Home extends Component {
     }
 
     componentWillMount = () => {
-        this.props.fetchProjects();
+        // this.props.fetchProjects();
+        this.props.fetchBlogPosts();
     }
 
     // addEventListener for scroll event 
@@ -48,11 +50,11 @@ class Home extends Component {
         // get the reference to the dom element
         const element = this._getPageElementFromKey(sectionName);
     
-        // temporary hack, will implement a section in the page, dont have time to do it right now
-        if(sectionName === "blog") {
-            const win = window.open("https://www.zhihu.com/people/shengyao-36/activities", '_blank');
-            win.focus();
-        }            
+        // temporary hack, will implement a section in the page
+        // if(sectionName === "blog") {
+        //     const win = window.open("https://www.zhihu.com/people/shengyao-36/activities", '_blank');
+        //     win.focus();
+        // }            
         // ----
 
         if(!element) return;
@@ -79,12 +81,9 @@ class Home extends Component {
         for(let key in refs) {
             const boundingRect = this._getPageElementFromKey(key).getBoundingClientRect();
 
-            // console.log(boundingRect.top - this._getNavBarHeight());
             if( boundingRect.top - this._getNavBarHeight() <= 0 ) {
                 this._onEnterSection(key);
                 inSection = true;
-                console.log("in section");
-                console.log("key is ", key);
             }
         }
 
@@ -92,7 +91,6 @@ class Home extends Component {
             // set state 
             this._onEnterSection("contact");
             inSection = true;
-            console.log("in section contact")
         }
 
         if(!inSection) {
@@ -111,6 +109,10 @@ class Home extends Component {
 
     render() {
         const {currentSection, currentScroll} = this.state;
+        const {projects, blogPosts} = this.props;
+        // console.log("in home, projects is", projects);
+        console.log("in home, blogPosts is ", blogPosts);
+        
         return (
             <div className="root-home"> 
                 {/* nav bar  */}
@@ -121,12 +123,22 @@ class Home extends Component {
                 {/* header  */}
                 <Header />
                 
-                {/* sections  */}
+                {/* home-sections  */}
                 {
                     homeSections.filter(section =>section.component)
                     .map(section =>
                         <div key={section.name} ref={section.name}> 
-                            { section.name === "work" ? <section.component onShowProjectDetails={() => this.scrollToSection("work")} /> : <section.component /> }
+                            { 
+                                section.name === "work" || section.name === "blog"
+                                ? 
+                                section.name === "work" 
+                                ?
+                                <section.component onShowProjectDetails={() => this.scrollToSection("work")} /> 
+                                :
+                                <section.component onShowBlogDetails={() => this.scrollToSection("blog")} /> 
+                                :
+                                <section.component /> 
+                            }
                         </div> 
                     )
                 }
@@ -137,7 +149,8 @@ class Home extends Component {
 }
 
 const mapStateToProps = store => ({
-    projects: store.projects
+    // projects: store.projects,
+    blogPosts: store.blogPosts
 });
 
 
@@ -152,7 +165,8 @@ const mapStateToProps = store => ({
 // bind multiple action creators to a dispatch() function 
 // Now you can call them directly, eg. this.props.fetchProjects();
 const mapDispatchToProps = dispatch => ({
-    fetchProjects:(args) => dispatch(fetchProjects(args))
+    // fetchProjects:(args) => dispatch(fetchProjects(args)),
+    fetchBlogPosts:(args) => dispatch(fetchBlogPosts(args))
 });
 // Important things happening here: 
 // 1. we re setting up props that hold our actions creator

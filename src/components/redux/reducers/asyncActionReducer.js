@@ -10,6 +10,7 @@ export default ({ actionTypePrefix, objectsInitialState, isFetchingInitialState 
     objectsReducer: (state = objectsInitialState, action) => {
         switch(action.type) {
             case actionTypePrefix + FETCH_SUCCESS:
+                console.log("in reducer, action.payload is ", action.payload);
                 return state.concat(action.payload);
             default:
                 return state;

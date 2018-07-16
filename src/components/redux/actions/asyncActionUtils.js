@@ -23,6 +23,7 @@ const getAsyncAction = ({actionTypePrefix, asyncFunc}) => {
     };
 
     const successAction = payload => {
+        console.log("in async action, payload is", payload);
         return {
             type: actionTypeSuccess,
             payload: payload

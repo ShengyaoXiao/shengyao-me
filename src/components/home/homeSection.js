@@ -1,6 +1,6 @@
 import About from "./about/About";
 import WorkContainer from "./work/WorkContainer";
-// import Blog from "./blog/Blog";
+import BlogContainer from "./blog/BlogContainer";
 import Contact from "./contact/Contact";
 
 const SECTIONS = [
@@ -14,7 +14,7 @@ const SECTIONS = [
     },
     {
         name: "blog",
-        component: null
+        component: BlogContainer
     },
     {
         name: "contact",

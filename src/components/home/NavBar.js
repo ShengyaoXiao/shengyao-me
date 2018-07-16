@@ -19,7 +19,7 @@ const Navbar = ({items, currentSection, currentScroll, onItemClick}) => {
                     return <span 
                                 key={item.name}
                                 onClick={ev=>{onItemClick(item.name);}}
-                                className={"navbar-item navbar-item-dimensions clickable " +(item.name === currentSection ? "navbar-item-selected":"" )}>
+                                className={"navbar-item navbar-item-dimensions clickable" +(item.name === currentSection ? " navbar-item-selected":"" )}>
                                 {item.name}
                             </span>
                 })}
