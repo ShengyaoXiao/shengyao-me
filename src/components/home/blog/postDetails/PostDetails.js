@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {withRouter} from 'react-router';
 import {connect} from 'react-redux';
 
-import "./postDetails.css";
+// import "./postDetails.css";
 
 class PostDetails extends Component {
     componentDidMount = () => {

@@ -19,14 +19,15 @@ class BlogContainer extends Component {
         const key = location.pathname.substring(1);
 
         return (
-            <TransitionGroup className="blog"> 
-                <CSSTransition key={key} className="route-fade" timeout={600} > 
-                    <Switch location={location} >             
-                        <Route path={"/:postId"} exact component={PostDetails} />
-                        <Route path={"/"}  component={Blog} />
-                    </Switch>
-                </CSSTransition>
-            </TransitionGroup>
+            // <TransitionGroup className="blog"> 
+            //     <CSSTransition key={key} className="route-fade" timeout={600} > 
+            //         <Switch location={location} >             
+            //             {/* <Route path={"/:postId"} exact component={PostDetails} /> */}
+            //             <Route path={"/"}  component={Blog} />
+            //         </Switch>
+            //     </CSSTransition>
+            // </TransitionGroup>
+            <Blog />
         );
     }
 
