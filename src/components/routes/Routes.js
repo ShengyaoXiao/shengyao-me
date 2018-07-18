@@ -4,6 +4,7 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import Home from '../home/Home';
+// import BlogPage from '../blogPage/BlogPage';
 
 // import ReactGA from 'react-ga';
 
@@ -11,8 +12,15 @@ const routes = [
     {
         name: "Home",
         path: "/",
+        // exact: true,
         component: Home 
-    }
+    }, 
+    // {
+    //     name: "Blog",
+    //     path: "/blog",
+    //     // exact: true,
+    //     component: BlogPage
+    // }
 ]
 
 const Routes = () => {

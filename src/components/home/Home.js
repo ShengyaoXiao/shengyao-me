@@ -6,7 +6,7 @@ import {withRouter} from 'react-router';
 import scrollToElement from 'scroll-to-element';
 
 import {fetchProjects} from "../redux/actions/projects";
-import {fetchBlogPosts} from "../redux/actions/blogPost";
+// import {fetchBlogPosts} from "../redux/actions/blogPost";
 
 import Navbar from "./NavBar";
 import Header from './header/Header';
@@ -27,7 +27,7 @@ class Home extends Component {
 
     componentWillMount = () => {
         this.props.fetchProjects();
-        this.props.fetchBlogPosts();
+        // this.props.fetchBlogPosts();
     }
 
     // addEventListener for scroll event 
@@ -51,10 +51,10 @@ class Home extends Component {
         const element = this._getPageElementFromKey(sectionName);
     
         // temporary hack, will implement a section in the page
-        // if(sectionName === "blog") {
-        //     const win = window.open("https://www.zhihu.com/people/shengyao-36/activities", '_blank');
-        //     win.focus();
-        // }            
+        if(sectionName === "blog") {
+            const win = window.open("https://www.zhihu.com/people/shengyao-36/activities", '_blank');
+            win.focus();
+        }            
         // ----
 
         if(!element) return;
@@ -122,22 +122,33 @@ class Home extends Component {
                 
                 {/* home-sections  */}
                 {
-                    homeSections.filter(section =>section.component)
-                    .map(section =>
-                        <div key={section.name} ref={section.name}> 
-                            { 
-                                section.name === "work" || section.name === "blog"
-                                ? 
+                    // homeSections.filter(section =>section.component)
+                    // .map(section =>
+                    //     <div key={section.name} ref={section.name}> 
+                    //         { 
+                    //             section.name === "work" || section.name === "blog"
+                    //             ? 
+                    //             section.name === "work" 
+                    //             ?
+                    //             <section.component onShowProjectDetails={() => this.scrollToSection("work")} /> 
+                    //             :
+                    //             <section.component onShowBlogDetails={() => this.scrollToSection("blog")} /> 
+                    //             :
+                    //             <section.component /> 
+                    //         }
+                    //     </div> 
+                    // )
+                    homeSections.filter(section=>section.component).map(section=>
+                        <div key={section.name} ref={section.name}>
+                            {
                                 section.name === "work" 
-                                ?
-                                <section.component onShowProjectDetails={() => this.scrollToSection("work")} /> 
-                                :
-                                <section.component onShowBlogDetails={() => this.scrollToSection("blog")} /> 
-                                :
-                                <section.component /> 
+                                ? 
+                                <section.component onShowProjectDetails={()=>this.scrollToSection("work")} />
+                                : 
+                                <section.component />
                             }
-                        </div> 
-                    )
+                        </div>
+                    )             
                 }
             </div>
         );
@@ -147,7 +158,7 @@ class Home extends Component {
 
 const mapStateToProps = store => ({
     projects: store.projects,
-    blogPosts: store.blogPosts
+    // blogPosts: store.blogPosts
 });
 
 
@@ -163,7 +174,7 @@ const mapStateToProps = store => ({
 // Now you can call them directly, eg. this.props.fetchProjects();
 const mapDispatchToProps = dispatch => ({
     fetchProjects:(args) => dispatch(fetchProjects(args)),
-    fetchBlogPosts:(args) => dispatch(fetchBlogPosts(args))
+    // fetchBlogPosts:(args) => dispatch(fetchBlogPosts(args))
 });
 // Important things happening here: 
 // 1. we re setting up props that hold our actions creator
