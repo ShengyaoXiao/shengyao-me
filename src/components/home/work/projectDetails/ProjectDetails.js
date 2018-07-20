@@ -1,11 +1,18 @@
 import React, {Component} from 'react';
 import {withRouter} from 'react-router';
 import {connect} from 'react-redux';
+import ReactGA from 'react-ga';
 
 import "./projectDetails.css";
 
 class ProjectDetails extends Component {
     componentDidMount = () => {
+        const logPageView = () => {
+            ReactGA.set({page: window.location.pathname + window.location.search});
+            ReactGA.pageview(window.location.pathname + window.location.search);
+        }
+        logPageView();
+        
         document.addEventListener("keydown", this.handleKeyDown);
     }
 

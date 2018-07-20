@@ -2,16 +2,16 @@ import React from 'react';
 
 import "./contactItem.css"
 
-// import ReactGA from 'react-ga';
+import ReactGA from 'react-ga';
 
 const ContactItem = ({ icon, text, url }) => {
     const className = icon;
 
     const onLinkClick = () => {
-        // ReactGA.event({
-        //     category: 'User',
-        //     action: 'Click on contact item: ' +url
-        // });
+        ReactGA.event({
+            category: 'User',
+            action: 'Click on contact item: ' + url
+        });
     }
 
     return (

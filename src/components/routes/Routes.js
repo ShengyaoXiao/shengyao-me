@@ -6,7 +6,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from '../home/Home';
 // import BlogPage from '../blogPage/BlogPage';
 
-// import ReactGA from 'react-ga';
+import ReactGA from 'react-ga';
 
 const routes = [
     {
@@ -24,11 +24,11 @@ const routes = [
 ]
 
 const Routes = () => {
-    // const logPageView = () => {
-    //     ReactGA.set({page: window.location.pathname + window.location.search});
-    //     React.pageView(window.location.pathname + window.location.search);
-    // }
-    // logPageView();
+    const logPageView = () => {
+        ReactGA.set({page: window.location.pathname + window.location.search});
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    }
+    logPageView();
 
     // the <Route> component is the main building block of React Router.
     // Anywhere that you want to only render content based on the location's pathname, you should use a <Router> element
