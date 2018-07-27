@@ -1,5 +1,5 @@
-# Shengyao
- My personal website WIP built with React + Redux. Check it out: https://www.xiaoshengyao.me
+
+ My personal site WIP built with React + Redux. https://www.xiaoshengyao.me
 
 ## Header is built with Three.js.
 Directory structure. 
