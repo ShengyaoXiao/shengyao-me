@@ -32,9 +32,14 @@ class ProjectDetails extends Component {
 
     render() {
         const projectId = this.props.location.pathname.substring(1);
+        
         const project = this.props.projects.find(project => project.id === projectId);
 
         return (
+            projectId === "blog"
+            ?
+            null
+            :
             <div className="project-details-dialog-container margin home-section"> 
                 <div className="project-details-navigate-back-button padding clickable text-unselectable" onClick={this.close}>
                     <i className="fa fa-arrow-left project-details-icon" aria-hidden="true" /><span>show all projects</span>

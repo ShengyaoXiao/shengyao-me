@@ -7,12 +7,12 @@ import Routes from './Routes';
 
 // react google analysis 
 import ReactGA from 'react-ga';
-ReactGA.initialize('UA-50551684-4');
+ReactGA.initialize('UA-122669633-1');
 
 const Root = () => {
     return (
         <Provider store={store}>
-            <Routes/>
+           <Routes/>
         </Provider>
     );
 }

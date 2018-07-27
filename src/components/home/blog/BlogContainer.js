@@ -2,16 +2,16 @@ import React, {Component} from 'react';
 import {withRouter} from 'react-router';
 import {Route, Switch} from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-
+import BlogPage from '../../blogPage/BlogPage';
 
 import Blog from './Blog';
 import PostDetails from './postDetails/PostDetails';
-
+import Home from '../Home';
 import "../../_common/common.css";
 
 class BlogContainer extends Component {
     conponentWillMount = () => {
-       this.props.history.listen(this.props.onShowBlogDetails);
+    //    this.props.history.listen(this.props.onShowBlogDetails);
     }
 
     render() {
@@ -27,7 +27,11 @@ class BlogContainer extends Component {
             //         </Switch>
             //     </CSSTransition>
             // </TransitionGroup>
-            <Blog />
+            // <Blog />
+            <Switch location={location} >             
+                <Route path={"/blog"} exact component={BlogPage} />  
+                {/* <Route path={"/"}  component={Home} /> */}
+            </Switch>
         );
     }
 

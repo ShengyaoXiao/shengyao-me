@@ -14,7 +14,7 @@ const SECTIONS = [
     },
     {
         name: "blog",
-        component:null 
+        component: null
     },
     {
         name: "contact",

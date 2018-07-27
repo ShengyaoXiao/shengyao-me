@@ -7,7 +7,7 @@ import registerServiceWroker from './registerServiceWorker';
 
 import './index.css';
 
-alert("Some parts of the website are still under construction :)");
+// alert("Some parts of the website are still under construction :)");
 ReactDOM.render(<Root/>, document.getElementById('root'));
 
 registerServiceWroker();
