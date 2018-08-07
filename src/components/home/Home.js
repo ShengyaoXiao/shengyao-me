@@ -52,9 +52,9 @@ class Home extends Component {
     
         // temporary hack, will implement a section in the page
         if(sectionName === "blog") {
-            // const win = window.open("https://www.zhihu.com/people/shengyao-36/activities", '_blank');
-            // win.focus();
-            this.props.history.push("/blog");
+            const win = window.open("https://www.zhihu.com/people/shengyao-36/activities", '_blank');
+            win.focus();
+            // this.props.history.push("/blog");
         }            
         // ----
 
