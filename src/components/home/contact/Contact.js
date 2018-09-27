@@ -30,7 +30,9 @@ class Contact extends Component {
         return (
             <div className="home-section contact-container">
                 <div>
-                Drop a line
+                    <span className="about-text-belief">Make it work. Make it look pretty. Make it work well or better.</span>
+                    <br/><br/>
+                    Drop a line
                 </div>
 
                 <div className="contact-social-group">
