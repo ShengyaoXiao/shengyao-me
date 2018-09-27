@@ -6,7 +6,7 @@ export default {
                 name: "Sudoku",
                 labels: ["Three.js", "CSS3DRenderer", "TweenJS"],
                 subtitle: "3D implementation of Sodoku",
-                description: "A 3D Sodoku game with functionality includes to start a new game, reset the board, check input collisions, enter and delete values. The game is built with Three.js but to allow user interatcion in a 3D scene, the game is rendered by CSS3DRenderer. It applys 3D transformations to DOM elments via CSS transform properties.",
+                description: "A 3D Sodoku puzzle with functionality includes to start a new game, reset the board, check input collisions, enter and delete values. Sodoku is built with Three.js but to allow user interatcion in a 3D scene, the game is rendered by CSS3DRenderer. It applys 3D transformations to DOM elments via CSS transform properties. Hence each cell of the board is both a 3D object and DOM element.",
                 links: [{url:"https://github.com/ShengyaoXiao/basicSudoku", name:"Open Project", icon: "fab fa-github"}],
                 secondaryLinks: [], 
                 img: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FsudokuSmall.gif?alt=media&token=171cef4f-c17c-418d-8eb0-eba738929260",
