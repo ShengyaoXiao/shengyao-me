@@ -22,7 +22,7 @@ export default {
             name: "facebook",
             text: "",
             icon: "fab fa-facebook-f",
-            url: ""
+            url: "https://www.facebook.com/profile.php?id=100007474726466"
         }
     ] ) )
 }
