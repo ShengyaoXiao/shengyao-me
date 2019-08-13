@@ -6,7 +6,7 @@ export default {
                 name: "Furnitrade",
                 labels: ["React.js", "Web App"],
                 subtitle: "The web app that helps you find desired used furniture or sell one easily",
-                description: "Furnitrade is a furniture trading platform where its users can browse furniture, contact the sellers, and post information about the furniture that they want to sell. <br/><br/> The idea of Furnitrade was born when we, as college students who were on a budget, always complained that it's difficult to find cheap second-hand furniture or sell them at a fair price: When we want to buy some cheap used furniture, we often spent lots of time searching and comparing products from different platforms. When we want to sell used furniture, we had to post them on different platforms as well. Plus we might encounter with potentially untrusted buyers and sellers. <br/><br/>Therefore, Furnitrade is designed to improve used furniture trading experience by providing organized information about furniture as well as quick, trustful access to sellers. <br/><br/> Technologies used: React.js, Flask, and MongoDB",
+                description: "Furnitrade is a furniture trading platform where its users can browse furniture, contact the sellers, and post information about the furniture that they want to sell. <br/><br/> The idea of Furnitrade was born when we, as college students who were on a budget, always complained that it's difficult to find cheap second-hand furniture or sell them at a fair price: When we want to buy some cheap used furniture, we often spent lots of time searching and comparing products from different platforms. When we want to sell used furniture, we had to post them on different platforms as well. Plus we might encounter with potentially untrusted buyers and sellers. <br/><br/>Therefore, Furnitrade is designed to improve used furniture trading experience by providing organized information about furniture as well as quick, trustful access to sellers. <br/><br/> Technologies used: React.js, Flask, and MongoDB. <br/><br/> If you want to know more about Furnitrade, feel free to watch the demo.",
                 links: [{url:"https://www.youtube.com/watch?v=7hTTqTOZBfY", name:"Watch Demo",icon:"fab fa-youtube"}], 
                 secondaryLinks: [], 
                 img: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FfurnitradeWide.gif?alt=media&token=dad828e2-9004-41dd-b618-9757196ef38d",
@@ -16,9 +16,9 @@ export default {
             {
                 id: "Mememaster",
                 name: "Meme Master",
-                labels: ["Web App", "Canvas"],
-                subtitle: "Let's make a meme",
-                description: "Meme Master is a web application that allows users to create, manage, and distribute Memes using vanilla JavaScript, HTML, and CSS. It was structured and coded scalable database utilizing Google Firebase. <br/><br/>The HTML Canvas API was used to implement the functionality of text editing on the images. Users can upload a picture as the background of the meme, and they can change the text contents, colors, sizes and fonts.",
+                labels: ["Web App", "Canvas", "Firebase"],
+                subtitle: "Let's create a meme",
+                description: "Meme Master is a web application that allows users to create, manage, and distribute Memes using vanilla JavaScript, HTML, and CSS. I structured and coded scalable database utilizing Google Firebase. <br/><br/>The HTML Canvas API was used to implement the functionality of text editing on the images. Users can upload a picture as the background of the meme, and they can change the text contents, colors, sizes and fonts.",
                 links: [],
                 secondaryLinks: [], 
                 img: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FmememasterLarge.gif?alt=media&token=da31dcfe-f6db-48ed-b7f9-b4bf17497afd",
@@ -35,7 +35,19 @@ export default {
                 secondaryLinks: [{url:"https://github.com/ShengyaoXiao/basic-sudoku", name:"Open Project", icon: "fab fa-github"}], 
                 img: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FsudokuSmall.gif?alt=media&token=171cef4f-c17c-418d-8eb0-eba738929260",
                 imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FsudokuSmall.gif?alt=media&token=171cef4f-c17c-418d-8eb0-eba738929260",
-                highlight: true
+                highlight: false
+            },
+            {
+                id: "MonsterFighter",
+                name: "Monster Fighter",
+                labels: ["HCI"],
+                subtitle: "Human-centered Application Design and Development ",
+                description: "Monster Fighter is the digital prototype that we created for an HCI course, CSE170/COGS120. This design and development focused on the human-centered design process. <br/><br/> We started this project by need-finding, which means that we observed and interviewed people and identified user needs. Based on the user needs that we found, we concluded a core problem that we intended to solve. With the problem, we spent the next two weeks drawing the storyboards and paper prototypes. Then we showed our prototypes to our classmates, and we did heuristic evaluations, which I found was the most interesting part of the course. Through heuristic evaluations, we received useful feedback from our classmates, and then we were able to make revisions on the prototypes. Once we were satisfied with our prototypes, we started to implement the app and do various kinds of testing on the app. I found user testing was helpful for us to understand the users’ mental models. <br/><br/> If you want to know more about Monster Fighter, feel free to watch the demo. ",
+                links: [{url:"https://www.youtube.com/watch?v=qJy5KI7WzPs",  name:"Watch Demo",icon:"fab fa-youtube"}],
+                secondaryLinks: [], 
+                img: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FmfLarge.gif?alt=media&token=9e326b19-f857-47fc-a144-80cfd99b0e12",
+                imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FmfLarge.gif?alt=media&token=9e326b19-f857-47fc-a144-80cfd99b0e12",
+                highlight: false
             },
             {
                 id: "Postprocessing",
@@ -47,7 +59,7 @@ export default {
                 secondaryLinks: [], 
                 img: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2Fpostprocessing.gif?alt=media&token=0291b8ff-babc-4d40-9392-37d992a57961",
                 imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FpostprocessingSmall.gif?alt=media&token=4eae330c-1013-47e7-8ab9-799cc3351e84",
-                highlight: true
+                highlight: false
             },
             {
                 id: "Serendipity",
