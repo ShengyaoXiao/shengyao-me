@@ -13,10 +13,10 @@ export default {
             url: "https://github.com/ShengyaoXiao"
         },
         {
-            name: "codepen",
+            name: "linkedin",
             text: "",
-            icon: "fab fa-codepen",
-            url: "https://codepen.io/dashboard?type=view&opts_itemType=pen&opts_filter=all&opts_orderBy=id&opts_orderDirection=0&opts_tag=0&displayType=grid&previewType=iframe&page=0"
+            icon: "fab fa-linkedin",
+            url: "https://www.linkedin.com/in/shelley-xiao-103918190/"
         },
         {
             name: "facebook",

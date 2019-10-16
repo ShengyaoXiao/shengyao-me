@@ -30,7 +30,7 @@ export default {
                 name: "Sudoku",
                 labels: ["Three.js", "CSS3DRenderer", "TweenJS"],
                 subtitle: "Web 3D implementation of Sodoku",
-                description: "A web 3D Sodoku game with functionality including to start a new game, reset the board, check input collisions, enter and delete values. The game is built with Three.js. <br/><br/>To allow user interaction in a 3D scene, the game is rendered by CSS3DRenderer, a Three.js feature that applies 3D transformations to DOM elements via CSS properties. So each cell of the board is both a 3D object and DOM element.",
+                description: "A web 3D Sudoku game with functionality including to start a new game, reset the board, check input value collisions, enter and delete values. The game is built with Three.js. <br/><br/>To allow user interaction in a 3D scene, the game is rendered by CSS3DRenderer, a Three.js feature that applies 3D transformations to DOM elements via CSS properties. So each cell of the board is both a 3D object and DOM element.",
                 links: [{url:"https://shengyaoxiao.github.io/basicSudoku/index.html", name:"Plat it", icon:"far fa-arrow-alt-circle-right"}],
                 secondaryLinks: [{url:"https://github.com/ShengyaoXiao/basic-sudoku", name:"Open Project", icon: "fab fa-github"}], 
                 img: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FsudokuSmall.gif?alt=media&token=171cef4f-c17c-418d-8eb0-eba738929260",
