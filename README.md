@@ -1,5 +1,5 @@
 
- My personal site WIP built with React + Redux. https://www.xiaoshengyao.me
+ My personal site https://www.xiaoshengyao.me
 
 ## Header is built with Three.js.
 Directory structure. 
