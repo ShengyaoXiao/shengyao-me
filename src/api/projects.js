@@ -10,7 +10,8 @@ export default {
                 links: [{url:"https://www.youtube.com/watch?v=7hTTqTOZBfY", name:"Watch Demo",icon:"fab fa-youtube"}], 
                 secondaryLinks: [], 
                 img: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FfurnitradeWide.gif?alt=media&token=dad828e2-9004-41dd-b618-9757196ef38d",
-                imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2Ffurnitrade.gif?alt=media&token=a3e1fc50-1bdf-45b3-a55d-cc51161b83ae",
+                imgGif: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2Ffurnitrade.gif?alt=media&token=a3e1fc50-1bdf-45b3-a55d-cc51161b83ae",
+                imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FfurnitradeStatic.png?alt=media&token=f81edc05-f9b8-4844-b809-6b5024a6a6c2",
                 highlight: true
             },
             {
@@ -22,7 +23,8 @@ export default {
                 links: [],
                 secondaryLinks: [], 
                 img: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FmememasterLarge.gif?alt=media&token=da31dcfe-f6db-48ed-b7f9-b4bf17497afd",
-                imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2Fmememaster.gif?alt=media&token=caca0872-27fe-4bf5-bf08-2cda59b89a04",
+                imgGif: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2Fmememaster.gif?alt=media&token=caca0872-27fe-4bf5-bf08-2cda59b89a04",
+                imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FmemeMasterStatic.png?alt=media&token=860f1645-bc89-4da4-adcc-21dc3bb669ea",
                 highlight: true
             },
             {
@@ -34,7 +36,8 @@ export default {
                 links: [{url:"https://shengyaoxiao.github.io/basicSudoku/index.html", name:"Plat it", icon:"far fa-arrow-alt-circle-right"}],
                 secondaryLinks: [{url:"https://github.com/ShengyaoXiao/basic-sudoku", name:"Open Project", icon: "fab fa-github"}], 
                 img: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FsudokuSmall.gif?alt=media&token=171cef4f-c17c-418d-8eb0-eba738929260",
-                imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FsudokuSmall.gif?alt=media&token=171cef4f-c17c-418d-8eb0-eba738929260",
+                imgGif: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FsudokuSmall.gif?alt=media&token=171cef4f-c17c-418d-8eb0-eba738929260",
+                imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FsudokuStatic.png?alt=media&token=19e9d199-fd30-49e3-90df-dc14f32cb7d5",
                 highlight: false
             },
             {
@@ -46,7 +49,8 @@ export default {
                 links: [{url:"https://www.youtube.com/watch?v=qJy5KI7WzPs",  name:"Watch Demo",icon:"fab fa-youtube"}],
                 secondaryLinks: [], 
                 img: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FmfLarge.gif?alt=media&token=9e326b19-f857-47fc-a144-80cfd99b0e12",
-                imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FmfLarge.gif?alt=media&token=9e326b19-f857-47fc-a144-80cfd99b0e12",
+                imgGif: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FmfLarge.gif?alt=media&token=9e326b19-f857-47fc-a144-80cfd99b0e12",
+                imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FmfStatic.png?alt=media&token=7fbdcbbf-182f-4ca0-8729-4dc75ac91677",
                 highlight: false
             },
             {
@@ -58,7 +62,8 @@ export default {
                 links: [{url:"https://github.com/ShengyaoXiao/postprocessing", name:"Open Project", icon: "fab fa-github"}],
                 secondaryLinks: [], 
                 img: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2Fpostprocessing.gif?alt=media&token=0291b8ff-babc-4d40-9392-37d992a57961",
-                imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FpostprocessingSmall.gif?alt=media&token=4eae330c-1013-47e7-8ab9-799cc3351e84",
+                imgGif: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FpostprocessingSmall.gif?alt=media&token=4eae330c-1013-47e7-8ab9-799cc3351e84",
+                imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FpostprocessingStatic.png?alt=media&token=b280a71e-a21c-402d-925c-40b60e23ba8b",
                 highlight: false
             },
             {
@@ -69,8 +74,9 @@ export default {
                 description: "This is an experiment with Three.js and GLSL. The random shape of the object is created by a vertex shader program that changes the vertex displacement randomly. A bloom shader pass creates its glowing effect. I named this project 'Serendipity' as it looks like a magic gem.",
                 links: [{url:"https://github.com/ShengyaoXiao/glsl/tree/master/experiment%235", name:"Open Project",icon: "fab fa-github"}],
                 secondaryLinks: [],
-                imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FserendipitySmall.gif?alt=media&token=a5628291-cd31-4ae6-9cd2-433b43722d5d",
+                imgGif: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FserendipitySmall.gif?alt=media&token=a5628291-cd31-4ae6-9cd2-433b43722d5d",
                 img:  "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2Fserendipity.jpg?alt=media&token=3711fd88-3c4a-47c0-99a9-db2317fc5f55",
+                imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FserendipityStatic.png?alt=media&token=b561ed51-def2-45b9-99c5-a936af75a985",
                 highlight: false
             },
             {
@@ -82,6 +88,7 @@ export default {
                 links: [{url:"https://zhuanlan.zhihu.com/p/38612359", name: "Read the blog",icon: "fas fa-external-link-alt"}],
                 secondaryLinks: [{url: "https://codepen.io/higashino/pen/xzQwoe", name: "Play it", icon: "fab fa-codepen"}],
                 img: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FmoonAfter.png?alt=media&token=60c2e0bf-d76d-44f3-b5e9-c59d57ed50dc",
+                imgGif: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FmoonAfter.png?alt=media&token=60c2e0bf-d76d-44f3-b5e9-c59d57ed50dc",
                 imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FmoonAfter.png?alt=media&token=60c2e0bf-d76d-44f3-b5e9-c59d57ed50dc",
                 highlight: false
             },
@@ -94,7 +101,8 @@ export default {
                 links: [{url: "https://github.com/ShengyaoXiao/glsl/tree/master/experiment%236", name: "Open Project", icon: "fab fa-github"}],
                 secondaryLinks: [],
                 img: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2Flava.gif?alt=media&token=35525f3d-be45-4da9-aa01-090997b30dc7", 
-                imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FlavaSmall.gif?alt=media&token=07943c78-2836-4c38-9eed-f3f49194143e",
+                imgGif: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FlavaSmall.gif?alt=media&token=07943c78-2836-4c38-9eed-f3f49194143e",
+                imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FlavaStatic.png?alt=media&token=f8146be7-7a4c-49e8-941c-91183391996f",
                 highlight: false
             },
             {
@@ -106,7 +114,8 @@ export default {
                 links: [],
                 secondaryLinks: [],
                 img: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2Fgrass.gif?alt=media&token=4dd84e3e-5f04-4ea2-99d3-30fd1954ba9f", 
-                imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FgrassSmall.gif?alt=media&token=cc92ec1c-db25-451f-8516-c8f7a3274825",
+                imgGif: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FgrassSmall.gif?alt=media&token=cc92ec1c-db25-451f-8516-c8f7a3274825",
+                imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FgrassStatics.png?alt=media&token=165674ab-fe15-47a1-8f88-a33a47694aa1",
                 highlight: false
             },
             {
@@ -118,7 +127,8 @@ export default {
                 links: [],
                 secondaryLinks:[], 
                 img: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2Fearth.gif?alt=media&token=c61ad868-15d3-4e40-8a62-ea73975f8085", 
-                imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FearthSmall.gif?alt=media&token=7df3602e-a326-41c8-9ad4-735004e0571a",
+                imgGif: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FearthSmall.gif?alt=media&token=7df3602e-a326-41c8-9ad4-735004e0571a",
+                imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FearthStatic.png?alt=media&token=7b913328-0c79-49f5-bfc5-c3e3dd2590bf",
                 highlight: false
             },
             // {

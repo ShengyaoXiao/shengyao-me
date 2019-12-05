@@ -12,10 +12,10 @@ const SECTIONS = [
         name: "work",
         component: WorkContainer
     },
-    {
-        name: "blog",
-        component: null
-    },
+    // {
+    //     name: "blog",
+    //     component: null
+    // },
     {
         name: "contact",
         component: Contact
