@@ -2,6 +2,34 @@ export default {
     fetchProjects: () => new Promise((resolve, reject) => resolve(
         [
             {
+                id: "WhatLiesintheDark",
+                name: "What Lies in the Dark",
+                labels: ["Unity3D", "VR"],
+                subtitle: "4 vs 1 multiplayer survival game designed for the festival",
+                description: "What Lies in the Dark is a game that 4 Xbox players being monsters play versus 1 VR player being a little boy. In this round of Building Virtual Worlds (academic course at the Entertainment Technology Center,) we needed to design an experience for the festival. Hence, we should have more people in each play so they won't wait in a long line. Also, the more people participate in a game, the more interesting the game becomes. <br/><br/>To make the experience is innovative and fun to play, we designed to have 4 monsters players using Xbox controllers. We let them sit in front of the screen where they can collaborate with their monster players. The VR player, on the other hand, is giving an immersive experience in a dark forest where he is haunted by 4 monsters. <br/><br/>The hardest part is the balance of the power between the monster players and the human player. Through playtesting, we noticed that guests with matched gaming skills enjoyed were more likely to enjoy the game. However, naive guests found that a learning curve is needed. While re-designing some game rules, we decided to make separate tutorials for monster players and VR players. Tutorials let players prepared for the tasks like using controllers to move and attack, which they need to perform in the actual game. <br/><br/>What Lies in the Dark is a three-weeks project in teams of 5 students at the Entertainment Technology Center in CMU. My role was the programmer.",
+                links:[],
+                secondaryLinks: [],
+                img:"https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2Fwhatliesinthedar%2Fdark.jpeg?alt=media&token=0cd32558-b2b8-401c-ae20-9450b869b3e1",
+                imgGif:"https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2Fwhatliesinthedar%2FwtliesinthedarkGif.gif?alt=media&token=34f59897-4f24-4f1b-92f2-4c1d187dc163",
+                imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2Fwhatliesinthedar%2F1.jpeg?alt=media&token=da8a9a2e-85a0-4f1b-a2ad-5b865c8388b7",
+                highlight: true
+
+            },  
+            {
+                id: "BabyGo",
+                name: "Baby Go",
+                labels: ["Unity3D", "VR"],
+                subtitle: "VR experience designed for naive guests",
+                description: "Baby Go is a VR experience for a native guest as being a baby to explore the baby's room filled with interactive toys. The design goal is to give the guest freedom while letting him enjoy the experience without frustration. Therefore we designed many interactive toys that the guest can play.  Also, the toys and candies form visual cues to lead the guest. <br/><br/>Through playtesting, we noticed that grabbing, climbing, and throwing are simple activities that the guest can perform intuitively in VR. With sound effects, those activities are rewarding too. <br/><br/>Baby Go is a two-weeks project in teams of 5 students at the Entertainment Technology Center in CMU. My role was the programmer. As a programmer, I learned that playtesting is important to improve the experience, but sometimes a small improvement in gameplay can take a long time to achieve.<br/><br/> If you want to know more about Baby Go, feel free to watch the demo.",
+                links:[],
+                secondaryLinks: [{url:"https://youtu.be/DPLgVPFbVKI", name:"Watch Demo",icon:"fab fa-youtube"}],
+                img:"https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FbabyGo.png?alt=media&token=7045101b-a0e3-49aa-9793-669ba19d2481",
+                imgGif:"https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2Fbabygogif.gif?alt=media&token=320f6f9f-09ee-4a62-b5d3-c36cf591dd70",
+                imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FbabyGo.png?alt=media&token=7045101b-a0e3-49aa-9793-669ba19d2481",
+                highlight: true
+
+            },
+            {
                 id: "Furnitrade",
                 name: "Furnitrade",
                 labels: ["React.js", "Web App"],
@@ -43,7 +71,7 @@ export default {
             {
                 id: "MonsterFighter",
                 name: "Monster Fighter",
-                labels: ["HCI"],
+                labels: ["Web App"],
                 subtitle: "Human-centered Application Design and Development ",
                 description: "Monster Fighter is the digital prototype that we created for an HCI course, CSE170/COGS120. This design and development focused on the human-centered design process. <br/><br/> We started this project by need-finding, which means that we observed and interviewed people and identified user needs. Based on the user needs that we found, we concluded a core problem that we intended to solve. With the problem, we spent the next two weeks drawing the storyboards and paper prototypes. Then we showed our prototypes to our classmates, and we did heuristic evaluations, which I found was the most interesting part of the course. Through heuristic evaluations, we received useful feedback from our classmates, and then we were able to make revisions on the prototypes. Once we were satisfied with our prototypes, we started to implement the app and do various kinds of testing on the app. I found user testing was helpful for us to understand the users’ mental models. <br/><br/> If you want to know more about Monster Fighter, feel free to watch the demo. ",
                 links: [{url:"https://www.youtube.com/watch?v=qJy5KI7WzPs",  name:"Watch Demo",icon:"fab fa-youtube"}],
