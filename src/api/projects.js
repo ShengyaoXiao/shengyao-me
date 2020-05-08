@@ -2,6 +2,20 @@ export default {
     fetchProjects: () => new Promise((resolve, reject) => resolve(
         [
             {
+                id: "liftoff",
+                name: "Liftoff PGH 2020",
+                labels: ["Web App", "React.js", "Firebase"],
+                subtitle: "The web app that enhances the conference experience",
+                description: "In the second semester here at CMU, Entertainment Technology Center. I got a chance to work in a student team to deliver a semester-long project for a real client. The team is called Liftoff, which was made up of 4 students - one producer, one designer, and two programmers. I was the programmer of the team and mainly responsible for the front-end development.<br/><br/>ETC Team Liftoff worked with the Jewish Healthcare Foundation, who will be hosting a healthcare themed conference called “Liftoff PGH 2020” this December. Our goal was to build a web app to facilitate the conference experience. It should recommend booths that might interest the attendees and encourage the attendees to interact more with the conference. It should also help our client gather user data. (ex. their thoughts about the conference)<br/><br/>In the first half of the semester, we worked in a project room at the ETC.  We were able to brainstorm and sketch lots of ideas and explain them to our client in person. However, we worked from home for the second half of the semester due to the pandemic. It was quite a unique experience for me since I learned how to communicate with people effectively in person or virtually. Also, time management and planning becomes even more important. We benefited a lot from daily morning zoom meetings and Trello for task tracking.<br/><br/>If you want to know the development process, feel free to check out the development blog. If you want to see the app working in action, please watch the trailer.<br/>",
+                links:[{url:"https://www.etc.cmu.edu/projects/liftoff/", name: "Development Blog", icon: "fas fa-external-link-alt"}],
+                secondaryLinks: [{url:"https://www.youtube.com/watch?v=cZ9GdtBeUts&feature=youtu.be", name: "Watch Trailer", icon: "fab fa-youtube"}],
+                img:"https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2Fliftoff%2Fliftoff%20header.png?alt=media&token=5399da5f-56c7-4e56-9459-2b930f902a5f",
+                imgGif:"https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2Fliftoff%2Fliftoffgif.gif?alt=media&token=0c630a01-3bf6-4ad2-856e-540b4d010744",
+                imgSmall: "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2Fliftoff%2Fliftoff_poster_v3.png?alt=media&token=ecc5a77e-f128-4ee3-b7ce-48ae5b8fb1e4",
+                highlight: true
+
+            },  
+            {
                 id: "WhatLiesintheDark",
                 name: "What Lies in the Dark",
                 labels: ["Unity3D", "VR"],
