@@ -1,9 +1,9 @@
-import * as THREE from 'three';
+import * as THREE from "three";
 import noise from "../../../../assets/textures/noise.png";
-import {ShaderPass} from 'three-effectcomposer-es6';
+import { ShaderPass } from "three-effectcomposer-es6";
 
-export default function addPassToComposer(composer, {width, height}) {
-    const VERTEX = `
+export default function addPassToComposer(composer, { width, height }) {
+  const VERTEX = `
         varying vec2 vUv;
         void main() {
             vUv = uv;
@@ -12,10 +12,10 @@ export default function addPassToComposer(composer, {width, height}) {
         }
     `;
 
-    // The shader definition also defines a Unifrom called tDiffuse used by
-    // the EffectComposer. It contains the image from the previous rendering
-    // pass that will be altered in the current pass. 
-    const FRAGMENT = `
+  // The shader definition also defines a Unifrom called tDiffuse used by
+  // the EffectComposer. It contains the image from the previous rendering
+  // pass that will be altered in the current pass.
+  const FRAGMENT = `
         varying vec2 vUv;
         uniform sampler2D tDiffuse;
         uniform sampler2D tShadow;
@@ -49,7 +49,7 @@ export default function addPassToComposer(composer, {width, height}) {
         }
     `;
 
-    const FRAGMENT_FINAL = `
+  const FRAGMENT_FINAL = `
         uniform sampler2D tDiffuse;
         uniform sampler2D tNoise;
         uniform float iTime;
@@ -88,40 +88,40 @@ export default function addPassToComposer(composer, {width, height}) {
         }
     `;
 
-    const resolution = new THREE.Vector2(width, height);
-    
-    const drawShader = {
-        uniforms: {
-            tDiffuse: {type: 't', value: null},
-            tShadow: {type: 't', value: null},
-            iResolution: { type: 'v2', value: resolution }
-        },
-        vertexShader: VERTEX,
-        fragmentShader: FRAGMENT
-    };
+  const resolution = new THREE.Vector2(width, height);
 
-    const pass = new ShaderPass(drawShader);
-    composer.addPass(pass);
+  const drawShader = {
+    uniforms: {
+      tDiffuse: { type: "t", value: null },
+      tShadow: { type: "t", value: null },
+      iResolution: { type: "v2", value: resolution },
+    },
+    vertexShader: VERTEX,
+    fragmentShader: FRAGMENT,
+  };
 
-    const finalShader = {
-        uniforms: {
-            tDiffuse: { type: 't', value: null},
-            iTime: {type: 'f', value: 0.0},
-            tNoise: {type: 't', value: new THREE.TextureLoader().load(noise)}
-        },
-        vertexShader: VERTEX,
-        fragmentShader: FRAGMENT_FINAL
-    };
+  const pass = new ShaderPass(drawShader);
+  composer.addPass(pass);
 
-    const passFinal = new ShaderPass(finalShader);
-    passFinal.renderToScreen = true;
-    passFinal.material.extensions.derivatives = true;
-    composer.addPass(passFinal);
+  const finalShader = {
+    uniforms: {
+      tDiffuse: { type: "t", value: null },
+      iTime: { type: "f", value: 0.0 },
+      tNoise: { type: "t", value: new THREE.TextureLoader().load(noise) },
+    },
+    vertexShader: VERTEX,
+    fragmentShader: FRAGMENT_FINAL,
+  };
 
-    const passes = {
-        pass: pass,
-        passFinal: passFinal
-    }
+  const passFinal = new ShaderPass(finalShader);
+  passFinal.renderToScreen = true;
+  passFinal.material.extensions.derivatives = true;
+  composer.addPass(passFinal);
 
-    return passes;
+  const passes = {
+    pass: pass,
+    passFinal: passFinal,
+  };
+
+  return passes;
 }

@@ -1,16 +1,15 @@
-
 export const prefixes = {
-    PROJECTS: "PROJECTS/",
-    BLOG_POSTS: "BLOG_POSTS/",
-    SOCIALS: "SOCIALS/"
-}
+  PROJECTS: "PROJECTS/",
+  BLOG_POSTS: "BLOG_POSTS/",
+  SOCIALS: "SOCIALS/",
+};
 
 export const actionTypes = {
-    FETCH: "FETCH:"
-}
+  FETCH: "FETCH:",
+};
 
 export const status = {
-    START: "START",
-    SUCCESS: "SUCCESS",
-    FAILURE: "FAILURE"
-}
+  START: "START",
+  SUCCESS: "SUCCESS",
+  FAILURE: "FAILURE",
+};

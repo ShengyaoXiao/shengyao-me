@@ -1,42 +1,42 @@
-/* 
+/*
  * threeEntryPoint
- * Create canvas and pass to sceneManager 
- * Call BindEventLisener 
- * Call Render (requestAnimationFrame and call sceneManager render) 
+ * Create canvas and pass to sceneManager
+ * Call BindEventLisener
+ * Call Render (requestAnimationFrame and call sceneManager render)
  */
-import SceneManager from './SceneManager';
+import SceneManager from "./SceneManager";
 
-export default container => {
-    const canvas = createCanvas(document, container);
+export default (container) => {
+  const canvas = createCanvas(document, container);
 
-    const sceneManager = new SceneManager(canvas);
-    
-    bindEventListeners();
-    render();
+  const sceneManager = new SceneManager(canvas);
 
-    function createCanvas(document, container) {
-        const canvas = document.createElement('canvas');
-        container.appendChild(canvas);
-        return canvas;
-    }
+  bindEventListeners();
+  render();
 
-    function bindEventListeners() {
-        window.onresize = resizeCanvas;
-        resizeCanvas();
-    }
+  function createCanvas(document, container) {
+    const canvas = document.createElement("canvas");
+    container.appendChild(canvas);
+    return canvas;
+  }
 
-    function resizeCanvas() {
-        canvas.style.width = '100%';
-        canvas.style.height = '100%';
-        
-        canvas.width = canvas.offsetWidth;
-        canvas.height = canvas.offsetHeight;
+  function bindEventListeners() {
+    window.onresize = resizeCanvas;
+    resizeCanvas();
+  }
 
-        sceneManager.onWindowResize();
-    }
+  function resizeCanvas() {
+    canvas.style.width = "100%";
+    canvas.style.height = "100%";
 
-    function render() {
-        requestAnimationFrame(render);
-        sceneManager.render();
-    }
-}
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+
+    sceneManager.onWindowResize();
+  }
+
+  function render() {
+    requestAnimationFrame(render);
+    sceneManager.render();
+  }
+};

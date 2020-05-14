@@ -1,54 +1,54 @@
-/* 
+/*
  * SceneSubect.js
  * Create mesh and add it to the scene
- * Expose an update function  
+ * Expose an update function
  */
-import * as THREE from 'three';
+import * as THREE from "three";
 
-export default scene => {
-    // const matNormal = new THREE.MeshNormalMaterial();
-    
-    // const matShadow = new THREE.MeshPhongMaterial({
-    //     color: 0xffffff,
-    //     shininess: 0.0
-    // });
+export default (scene) => {
+  // const matNormal = new THREE.MeshNormalMaterial();
 
-    // const floorGeo = new THREE.PlaneBufferGeometry(3.0, 3.0);
-    // const floor = new THREE.Mesh(floorGeo, matNormal);
-    // floor.position.set(0, -0.5, 0);
-    // floor.rotation.x = -((Math.PI*90)/180);
-    // floor.receiveShadow = true;
-    
-    // const sphereGeo = new THREE.SphereBufferGeometry(0.5, 32, 32);
-    // const sphere = new THREE.Mesh(sphereGeo, matNormal);
-    // sphere.castShadow = true;
-    // sphere.receiveShadow = true;
-    
-    // scene.add(floor);
-    // scene.add(sphere);    
+  // const matShadow = new THREE.MeshPhongMaterial({
+  //     color: 0xffffff,
+  //     shininess: 0.0
+  // });
 
-    // function changeMaterial(renderShadow) {
-    //     const material = renderShadow ? matShadow : matNormal;
-    //     floor.material = material;
-    //     sphere.material = material; 
-    // }
-   
-    // return {
-    //     changeMaterial
-    // };
+  // const floorGeo = new THREE.PlaneBufferGeometry(3.0, 3.0);
+  // const floor = new THREE.Mesh(floorGeo, matNormal);
+  // floor.position.set(0, -0.5, 0);
+  // floor.rotation.x = -((Math.PI*90)/180);
+  // floor.receiveShadow = true;
 
-    const uniforms = {
-        u_resolution: { type: 'v2', value: new THREE.Vector2()},
-        u_time: { type: 'f', value: 0.0 }
-    };
-    
-    const vertexShader = `
+  // const sphereGeo = new THREE.SphereBufferGeometry(0.5, 32, 32);
+  // const sphere = new THREE.Mesh(sphereGeo, matNormal);
+  // sphere.castShadow = true;
+  // sphere.receiveShadow = true;
+
+  // scene.add(floor);
+  // scene.add(sphere);
+
+  // function changeMaterial(renderShadow) {
+  //     const material = renderShadow ? matShadow : matNormal;
+  //     floor.material = material;
+  //     sphere.material = material;
+  // }
+
+  // return {
+  //     changeMaterial
+  // };
+
+  const uniforms = {
+    u_resolution: { type: "v2", value: new THREE.Vector2() },
+    u_time: { type: "f", value: 0.0 },
+  };
+
+  const vertexShader = `
         void main() {
             gl_Position = vec4(position, 1.0);
         }
     `;
-    
-    const fragmentShader = `
+
+  const fragmentShader = `
         uniform vec2 u_resolution;
         uniform float u_time;
         
@@ -89,28 +89,28 @@ export default scene => {
         }
     `;
 
-    const shaderMaterial = new THREE.ShaderMaterial({
-        uniforms: uniforms, 
-        vertexShader: vertexShader,
-        fragmentShader: fragmentShader
-    });
+  const shaderMaterial = new THREE.ShaderMaterial({
+    uniforms: uniforms,
+    vertexShader: vertexShader,
+    fragmentShader: fragmentShader,
+  });
 
-    const geometry = new THREE.PlaneBufferGeometry(2, 2);
-    const mesh = new THREE.Mesh( geometry, shaderMaterial );
-    
-    scene.add( mesh );
+  const geometry = new THREE.PlaneBufferGeometry(2, 2);
+  const mesh = new THREE.Mesh(geometry, shaderMaterial);
 
-    function update(time) {
-        uniforms.u_time.value += time;
-    }
+  scene.add(mesh);
 
-    function resize(width, height) {
-        uniforms.u_resolution.value.x = width;
-        uniforms.u_resolution.value.y = height;
-    }
+  function update(time) {
+    uniforms.u_time.value += time;
+  }
 
-    return {
-        update, 
-        resize 
-    };
-}
+  function resize(width, height) {
+    uniforms.u_resolution.value.x = width;
+    uniforms.u_resolution.value.y = height;
+  }
+
+  return {
+    update,
+    resize,
+  };
+};
