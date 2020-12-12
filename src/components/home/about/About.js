@@ -28,29 +28,29 @@ const About = () => {
         </span>
         <br />
         <span className="about-text-subtitle">
-          Front-End Developer | M.E.T. Student @ CMU
+          Software engineer | M.E.T. Student @ CMU
         </span>
         <br />
-        <br />I am a front-end developer and creative programmer who explores
-        the space between art, design, and humans. I am passionate about
-        learning and exploring how to fill this space through interactive
-        technology.
+        <br />I am a software engineer and creative programmer who explores the
+        space between art, design, and humans. I am passionate about learning
+        and exploring how to fill this space through interactive technology.
         <br />
         <br />
-        Currently, I am a first-year graduate student studying Entertainment
+        Currently, I am a second-year graduate student studying Entertainment
         Technology at Carnegie Mellon University. I have extensive internship
-        and project experience in web development, computer graphics, shader
+        and project experience in web deveSlopment, computer graphics, shader
         programming and human-computer interaction. In case you are curious,
         this website is built with React, Redux and Three.js.
         <br />
         <br />
-        I'll be interning at <b>Facebook</b> this summer.
+        I'll be joining <b>Facebook</b> as a software engineer after graduation.
+        I interned as a front end engineer this summer.
         <br />
         <br />
         If you want to know more:{" "}
         <a
           onClick={onLinkClick}
-          href="https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/resume%2FResume-XIAO%2C05-20.pdf?alt=media&token=6a82494d-2636-4ceb-b2a5-432e17a64249"
+          href="https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/resume%2FShengyao%20Xiao%20SDE%20Resume.pdf?alt=media&token=4ab2b738-0db2-4007-9642-287a698cf0d3"
           target="_blank"
           rel="noopener noreferrer"
         >

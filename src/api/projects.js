@@ -3,6 +3,45 @@ export default {
     new Promise((resolve, reject) =>
       resolve([
         {
+          id: "hotspot",
+          name: "HotSpot",
+          labels: ["Production", "Robotics"],
+          subtitle: "Interactive experience with Spot",
+          description:
+            "HotSpot was a team of six students at the ETC, CMU. I was the producer who was responsibe for shaping the project, from organizing staff, to communicaing with clients, ETC faculty and team members, to making decisions, and to scheduling. Our client was Boston Dynamics. A robotics company that is known for its robotic dog - Spot. Spot is an industrial robot and one use of Spot is that people can send Spot to dangerous environments. Recently, Spot was sent to Chernobyl nuclear disaster site to measure radiation levels. However, BD wanted us to create a game that illustrates the possibility of using Spot as a unique gaming platform. The feedback can be validated that whether the experience was indeed fun and worth people’s time. <br/><br/>More specifically, Boston Dynamics was looking for a complete game that elicits people’s positive emotions and is about 20 minutes long yet is able to hold people’s attention. Hence our goal was to create a game that centers on Spot and showcases Spot interactions in a fun and meaningful way. Despite of challenges like covid-restrictions and Spot's limitations, we managed to come up with a game that meets our client's needs. <br/><br/>Check out the project website, the recordings of the full experience, and the trailer.",
+          links: [
+            {
+              url: "https://www.etc.cmu.edu/projects/hotspot/",
+              name: "Project website",
+              icon: "fas fa-external-link-alt",
+            },
+            {
+              url: "https://youtu.be/dnlWWYnOOkQ",
+              name: "Watch trailer",
+              icon: "fab fa-youtube",
+            },
+          ],
+          secondaryLinks: [
+            {
+              url: "https://www.youtube.com/watch?v=hUBlPBIK4CY",
+              name: "Full experience - part 1",
+              icon: "fab fa-youtube",
+            },
+            {
+              url: "https://youtu.be/9t8FEx64f4c",
+              name: "Full experience - part 2",
+              icon: "fab fa-youtube",
+            },
+          ],
+          img:
+            "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2Fhotspot%2Flive%20screen%20shot.png?alt=media&token=26ee5b38-3f7f-43ab-91ca-861af3b7ba03",
+          imgGif:
+            "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2Fhotspot%2Flive%20screen%20shot.png?alt=media&token=26ee5b38-3f7f-43ab-91ca-861af3b7ba03",
+          imgSmall:
+            "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2Fhotspot%2Flive%20screen%20shot.png?alt=media&token=26ee5b38-3f7f-43ab-91ca-861af3b7ba03",
+          highlight: true,
+        },
+        {
           id: "liftoff",
           name: "Liftoff PGH 2020",
           labels: ["Web App", "React.js", "Firebase"],
@@ -95,7 +134,7 @@ export default {
             "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2Ffurnitrade.gif?alt=media&token=a3e1fc50-1bdf-45b3-a55d-cc51161b83ae",
           imgSmall:
             "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FfurnitradeStatic.png?alt=media&token=f81edc05-f9b8-4844-b809-6b5024a6a6c2",
-          highlight: true,
+          highlight: false,
         },
         {
           id: "Mememaster",
@@ -112,7 +151,7 @@ export default {
             "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2Fmememaster.gif?alt=media&token=caca0872-27fe-4bf5-bf08-2cda59b89a04",
           imgSmall:
             "https://firebasestorage.googleapis.com/v0/b/personal-website-f03d1.appspot.com/o/projects%2FmemeMasterStatic.png?alt=media&token=860f1645-bc89-4da4-adcc-21dc3bb669ea",
-          highlight: true,
+          highlight: false,
         },
         {
           id: "Sudoku",
