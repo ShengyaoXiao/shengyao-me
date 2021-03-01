@@ -22,7 +22,7 @@
     "redux-immutable-state-invariant": "^2.1.0",
     "redux-thunk": "^2.2.0",
     "scroll-to-element": "^2.0.0",
-    "three": "^0.93.0",
+    "three": "^0.125.0",
     "three-effectcomposer-es6": "0.0.4",
     "three-orbitcontrols": "^2.1.2"
   },
